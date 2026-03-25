@@ -76,27 +76,33 @@
         .top-bar-btn:hover { background: rgba(255,255,255,0.25); transform: translateY(-1px); }
         .top-bar-whatsapp { background: var(--whatsapp); color: #fff; }
         .top-bar-whatsapp:hover { background: #059669; }
+        .top-bar-map { background: var(--action); color: #fff; }
+        .top-bar-map:hover { background: #d97706; }
 
         header { background: #fff; box-shadow: var(--shadow-md); position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid var(--border); }
-        .nav-container { max-width: 1280px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 16px 24px; }
+        
+        /* MOBİL MENÜ DÜZENLEMESİ İÇİN GÜNCELLENEN ALAN */
+        .nav-container { max-width: 1280px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 16px 24px; flex-wrap: wrap; }
         .nav-logo { font-size: 22px; font-weight: 700; color: var(--primary); display: flex; align-items: center; gap: 12px; letter-spacing: -0.5px; }
         .nav-logo img { height: 40px; }
-        .nav-menu { list-style: none; display: flex; gap: 24px; }
+        
+        /* Hamburger İkonu - Masaüstünde Gizli */
+        .menu-toggle { display: none; font-size: 28px; cursor: pointer; color: var(--primary); user-select: none; }
+        
+        .nav-menu { list-style: none; display: flex; gap: 24px; transition: all 0.3s ease; }
         .nav-menu a { font-weight: 600; color: var(--text-muted); transition: color 0.3s; padding: 8px 0; display: inline-block; position: relative; }
         .nav-menu a:hover, .nav-menu a.active { color: var(--accent); }
         .nav-menu a.active::after { content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 2px; background: var(--accent); border-radius: 2px; }
         .toptan-link { background: var(--primary-light); color: white !important; padding: 8px 16px !important; border-radius: 6px; }
         .toptan-link:hover { background: var(--primary) !important; color: white !important; }
 
-        /* GÜNCELLENEN HERO (GİRİŞ) ALANI - WEBP UZANTILI */
         .hero { 
-            /* Arka plana fotoğraf eklendi, üstüne koyu film tabakası atıldı */
             background: linear-gradient(rgba(15, 32, 39, 0.75), rgba(32, 58, 67, 0.85)), url('ankara-madeni-yag-ostim-magaza.webp');
             background-size: cover;
-            background-position: center;
+            background-position: center 65%;
             background-repeat: no-repeat;
             color: #fff; 
-            padding: 120px 20px 140px 20px; 
+            padding: 150px 20px 170px 20px; 
             text-align: center; 
             clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%); 
         }
@@ -122,7 +128,6 @@
         .product-row:hover { box-shadow: var(--shadow-lg); transform: translateY(-2px); border-color: transparent; }
         .product-row:hover::before { opacity: 1; }
         
-        /* Görsel Altyapısı */
         .product-image-container { width: 100px; height: 100px; flex-shrink: 0; background: #f1f5f9; border-radius: 8px; display: flex; align-items: center; justify-content: center; overflow: hidden; border: 1px solid var(--border); }
         .product-image-container img { max-width: 100%; max-height: 100%; object-fit: contain; }
         .product-image-placeholder { color: #94a3b8; font-size: 11px; text-align: center; line-height: 1.4; }
@@ -152,14 +157,19 @@
         footer h3 { color: #fff; margin-bottom: 16px; font-size: 24px; font-weight: 700; }
         footer p { margin-bottom: 8px; font-size: 15px; }
 
+        /* MOBİL UYUM (RESPONSIVE) ALANI */
         @media (max-width: 768px) { 
             .top-bar { flex-direction: column; gap: 12px; text-align: center; padding: 16px; } 
             .top-bar-right { flex-direction: column; width: 100%; }
             .top-bar-btn { justify-content: center; padding: 12px; font-size: 14px; } 
             
-            .nav-container { flex-direction: column; gap: 16px; padding: 20px; } 
-            .nav-menu { flex-direction: column; width: 100%; text-align: center; gap: 10px; } 
-            .nav-menu a { display: block; padding: 12px; background: #f1f5f9; border-radius: 8px; font-size: 16px; } 
+            /* Menü Daraltma ve Hamburger Özelliği */
+            .nav-container { padding: 15px 20px; }
+            .menu-toggle { display: block; }
+            .nav-menu { display: none; width: 100%; flex-direction: column; text-align: center; gap: 10px; margin-top: 15px; }
+            .nav-menu.show { display: flex; } /* JavaScript ile bu class eklenecek */
+            .nav-menu a { display: block; padding: 12px; background: #f1f5f9; border-radius: 8px; font-size: 16px; width: 100%; } 
+            .nav-menu a.active::after { display: none; } /* Mobilde alt çizgiyi gizle */
             
             .hero { padding: 80px 20px 100px 20px; clip-path: none; }
             .hero h1 { font-size: 32px; }
@@ -181,6 +191,7 @@
         <div class="top-bar-right">
             <a href="tel:+905015421422" class="top-bar-btn">📞 Bizi Arayın: 0501 542 14 22</a>
             <a href="https://wa.me/905015421422" target="_blank" class="top-bar-btn top-bar-whatsapp">💬 WhatsApp'tan Mesaj At</a>
+            <a href="https://maps.google.com/?q=1229+Sokak+No:7+Ostim+Yenimahalle+Ankara" target="_blank" class="top-bar-btn top-bar-map">📍 Yol Tarifi Al</a>
         </div>
     </div>
 
@@ -190,9 +201,11 @@
                 <img src="logo.png" alt="Logo" onerror="this.style.display='none'">
                 Ankara Madeni Yağ
             </a>
-            <ul class="nav-menu">
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+            
+            <ul class="nav-menu" id="mobile-menu">
                 <li><a href="index.html" class="active">Ana Sayfa</a></li>
-                <li><a href="#selector">Ürünlerimiz</a></li>
+                <li><a href="#selector" onclick="toggleMenu()">Ürünlerimiz</a></li>
                 <li><a href="toptan.html" class="toptan-link">📦 Toptan Sipariş</a></li>
                 <li><a href="iletisim.html">İletişim</a></li>
             </ul>
@@ -253,70 +266,36 @@
     </footer>
 
 <script>
+    // MOBİL MENÜYÜ AÇIP KAPATAN FONKSİYON
+    function toggleMenu() {
+        const menu = document.getElementById('mobile-menu');
+        menu.classList.toggle('show');
+    }
+
     const db = {
         "Madeni Yağlar": {
             "5W30": [
-                { 
-                    brand: "Castrol", 
-                    name: "Edge 5W-30 LL Tam Sentetik Motor Yağı", 
-                    imageUrl: "",
-                    desc: "Castrol Edge 5W-30 LL, modern motorların ihtiyaç duyduğu en üst düzey korumayı sağlamak için özel olarak geliştirilmiş tam sentetik bir motor yağıdır. Fluid TITANIUM teknolojisi sayesinde motor basıncının en yüksek olduğu anlarda bile fiziksel yapısını değiştirerek sertleşir ve metal parçaların birbirine sürtünmesini engeller. Yeni nesil dizel partikül filtreli (DPF) ve benzinli araçlar için ideal bir seçimdir." 
-                },
-                { 
-                    brand: "Shell", 
-                    name: "Helix Ultra 5W-30 Saf Plus", 
-                    imageUrl: "",
-                    desc: "Shell Helix Ultra 5W-30, benzersiz PurePlus Teknolojisi kullanılarak doğrudan doğalgazdan elde edilmiş, pazarın en yenilikçi tam sentetik motor yağlarından biridir. Doğalgazdan üretildiği için motor içinde neredeyse hiç tortu bırakmaz. Hem turbo şarjlı hem de çok valfli modern benzinli ve dizel motorlarda kusursuz koruma sunar." 
-                },
-                { 
-                    brand: "Mobil 1", 
-                    name: "ESP 5W-30 Emisyon Sistemi Koruması", 
-                    imageUrl: "",
-                    desc: "Mobil 1 ESP 5W-30, dizel araçların partikül filtrelerinin (DPF) ve benzinli araçların katalitik konvertörlerinin (CAT) ömrünü uzatmak ve verimliliğini korumak amacıyla tasarlanmış, gelişmiş sentetik motor yağıdır. Düşük kül ve sülfür içeriği sayesinde emisyon sistemlerinin tıkanmasını engeller." 
-                }
+                { brand: "Castrol", name: "Edge 5W-30 LL Tam Sentetik Motor Yağı", imageUrl: "", desc: "Castrol Edge 5W-30 LL, modern motorların ihtiyaç duyduğu en üst düzey korumayı sağlamak için özel olarak geliştirilmiş tam sentetik bir motor yağıdır. Fluid TITANIUM teknolojisi sayesinde motor basıncının en yüksek olduğu anlarda bile fiziksel yapısını değiştirerek sertleşir." },
+                { brand: "Shell", name: "Helix Ultra 5W-30 Saf Plus", imageUrl: "", desc: "Shell Helix Ultra 5W-30, benzersiz PurePlus Teknolojisi kullanılarak doğrudan doğalgazdan elde edilmiş, pazarın en yenilikçi tam sentetik motor yağlarından biridir. Doğalgazdan üretildiği için motor içinde neredeyse hiç tortu bırakmaz." },
+                { brand: "Mobil 1", name: "ESP 5W-30 Emisyon Sistemi Koruması", imageUrl: "", desc: "Mobil 1 ESP 5W-30, dizel araçların partikül filtrelerinin (DPF) ve benzinli araçların katalitik konvertörlerinin (CAT) ömrünü uzatmak amacıyla tasarlanmış, gelişmiş sentetik motor yağıdır." }
             ],
             "10W40": [
-                { 
-                    brand: "Castrol", 
-                    name: "Magnatec 10W-40 A3/B4 Yarı Sentetik", 
-                    imageUrl: "",
-                    desc: "Motor aşınmalarının %75'i motorun ısınma aşamasında meydana gelir. Castrol Magnatec 10W-40, içerdiği akıllı moleküller sayesinde motor kapatıldığında kartere süzülmez, mıknatıs gibi motorun kritik parçalarına tutunarak ekstra bir koruma katmanı oluşturur. Şehir içi dur-kalk trafiğinin yarattığı aşırı zorlanmalara karşı motoru güvence altına alır." 
-                },
-                { 
-                    brand: "Petrol Ofisi", 
-                    name: "Maxima 10W-40 Uzun Ömürlü", 
-                    imageUrl: "",
-                    desc: "Yerli üretim gücünü arkasına alan Petrol Ofisi Maxima 10W-40, Türkiye'nin zorlu yol ve iklim şartlarına özel olarak formüle edilmiş yarı sentetik motor yağıdır. İçeriğindeki özel katıkları sayesinde motor içinde oluşabilecek siyah çamur ve tortu birikimini engeller." 
-                }
+                { brand: "Castrol", name: "Magnatec 10W-40 A3/B4 Yarı Sentetik", imageUrl: "", desc: "Motor aşınmalarının %75'i motorun ısınma aşamasında meydana gelir. Castrol Magnatec 10W-40, içerdiği akıllı moleküller sayesinde motor kapatıldığında kartere süzülmez, mıknatıs gibi motorun kritik parçalarına tutunur." },
+                { brand: "Petrol Ofisi", name: "Maxima 10W-40 Uzun Ömürlü", imageUrl: "", desc: "Yerli üretim gücünü arkasına alan Petrol Ofisi Maxima 10W-40, Türkiye'nin zorlu yol ve iklim şartlarına özel olarak formüle edilmiş yarı sentetik motor yağıdır." }
             ]
         },
         "Şanzıman Yağları": {
             "ATF": [
-                { 
-                    brand: "Castrol", 
-                    name: "Transmax ATF Z Tam Sentetik", 
-                    imageUrl: "",
-                    desc: "Otomatik şanzımanların karmaşık yapısı, sürekli sürtünme ve yüksek ısıya maruz kalır. Castrol Transmax ATF Z, Smooth Drive Teknolojisi ile formüle edilmiş tam sentetik otomatik şanzıman yağıdır. Şanzıman içinde oluşan sarsıntıları önleyerek vites geçişlerinin pürüzsüz ve sessiz olmasını sağlar." 
-                }
+                { brand: "Castrol", name: "Transmax ATF Z Tam Sentetik", imageUrl: "", desc: "Otomatik şanzımanların karmaşık yapısı, sürekli sürtünme ve yüksek ısıya maruz kalır. Castrol Transmax ATF Z, Smooth Drive Teknolojisi ile formüle edilmiş tam sentetik otomatik şanzıman yağıdır." }
             ]
         },
         "Hidrolik Yağlar": {
             "46 Numara": [
-                { 
-                    brand: "Shell", 
-                    name: "Tellus S2M 46 Aşınma Önleyici", 
-                    imageUrl: "",
-                    desc: "Endüstriyel presler, CNC tezgahları ve hareketli iş makinelerinin kalbi olan hidrolik sistemler için özel üretilmiş, çinko bazlı aşınma önleyici hidrolik yağıdır. Shell Tellus S2M 46, sistemde oluşan ısıya ve mekanik strese karşı yağın yapısının bozulmasını engeller." 
-                }
+                { brand: "Shell", name: "Tellus S2M 46 Aşınma Önleyici", imageUrl: "", desc: "Endüstriyel presler, CNC tezgahları ve hareketli iş makinelerinin kalbi olan hidrolik sistemler için özel üretilmiş, çinko bazlı aşınma önleyici hidrolik yağıdır." }
             ]
         },
         "Antifriz": [
-            { 
-                brand: "Petrol Ofisi", 
-                name: "Extended Life Coolant (Kırmızı)", 
-                imageUrl: "",
-                desc: "Organik asit teknolojisi (OAT) ile üretilmiş, silikat, amin, nitrit ve fosfat içermeyen çevre dostu uzun ömürlü radyatör soğutma sıvısıdır. Kışın donmaya, yazın ise kaynamaya karşı motorunuzu koruma altına alır." 
-            }
+            { brand: "Petrol Ofisi", name: "Extended Life Coolant (Kırmızı)", imageUrl: "", desc: "Organik asit teknolojisi (OAT) ile üretilmiş, silikat, amin, nitrit ve fosfat içermeyen çevre dostu uzun ömürlü radyatör soğutma sıvısıdır." }
         ]
     };
 
