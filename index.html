@@ -167,9 +167,9 @@
             .nav-container { padding: 15px 20px; }
             .menu-toggle { display: block; }
             .nav-menu { display: none; width: 100%; flex-direction: column; text-align: center; gap: 10px; margin-top: 15px; }
-            .nav-menu.show { display: flex; } /* JavaScript ile bu class eklenecek */
+            .nav-menu.show { display: flex; } 
             .nav-menu a { display: block; padding: 12px; background: #f1f5f9; border-radius: 8px; font-size: 16px; width: 100%; } 
-            .nav-menu a.active::after { display: none; } /* Mobilde alt çizgiyi gizle */
+            .nav-menu a.active::after { display: none; } 
             
             .hero { padding: 80px 20px 100px 20px; clip-path: none; }
             .hero h1 { font-size: 32px; }
@@ -239,6 +239,7 @@
                 </div>
             </div>
         </div>
+
 <style>
     .reviews-container {
         background: #f8fafc; padding: 50px 0; overflow: hidden; position: relative; border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0; margin-top: 40px; font-family: 'Inter', sans-serif;
@@ -248,11 +249,10 @@
     .reviews-title p { color: #64748b; font-size: 15px; }
     .reviews-title span { color: #f59e0b; font-size: 22px; letter-spacing: 2px; }
     
+    /* Hover pause kaldırıldı, hız artırıldı (daha düşük saniye = daha hızlı akış) */
     .reviews-track {
-        display: flex; width: max-content; animation: scrollReviews 25s linear infinite; gap: 20px; padding: 10px 0;
+        display: flex; width: max-content; animation: scrollReviews 40s linear infinite; gap: 20px; padding: 10px 0;
     }
-    /* Fare kutuların üzerine gelince kayma dursun ki müşteri okuyabilsin */
-    .reviews-container:hover .reviews-track { animation-play-state: paused; }
 
     /* Tıklanabilir Yorum Kutusu */
     .review-box {
@@ -287,86 +287,198 @@
         <a href="https://share.google/hDIRKOJj8jgsklwrn" target="_blank" class="review-box">
             <div class="review-stars">★★★★★</div>
             <div class="review-text">"Ostim'de toptan yağ konusunda en uygun fiyatları buradan aldık. Teslimat çok hızlıydı, esnaflıkları on numara."</div>
-            <div class="review-author">
-                <div class="author-avatar">S</div>
-                <div class="author-name">Sefa K**</div>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="google-logo" alt="Google Logo">
-            </div>
+            <div class="review-author"><div class="author-avatar">V</div><div class="author-name">Vehbi P**</div><img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="google-logo" alt="Google Logo"></div>
         </a>
         
         <a href="https://share.google/hDIRKOJj8jgsklwrn" target="_blank" class="review-box">
             <div class="review-stars">★★★★★</div>
             <div class="review-text">"Şantiyemiz için varil gres alımı yaptık, aynı gün teslim ettiler. Bundan sonra tek adresimiz."</div>
-            <div class="review-author">
-                <div class="author-avatar">D</div>
-                <div class="author-name">Durmuş N*</div>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="google-logo" alt="Google Logo">
-            </div>
+            <div class="review-author"><div class="author-avatar">F</div><div class="author-name">Faruk Y**</div><img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="google-logo" alt="Google Logo"></div>
         </a>
 
         <a href="https://share.google/hDIRKOJj8jgsklwrn" target="_blank" class="review-box">
             <div class="review-stars">★★★★★</div>
             <div class="review-text">"Aradığımız 68 numara hidrolik yağını anında buldular. Çözüm odaklı ve güvenilir bir işletme."</div>
-            <div class="review-author">
-                <div class="author-avatar">M</div>
-                <div class="author-name">Mustafa K*</div>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="google-logo" alt="Google Logo">
-            </div>
+            <div class="review-author"><div class="author-avatar">M</div><div class="author-name">Mustafa K*</div><img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="google-logo" alt="Google Logo"></div>
         </a>
 
         <a href="https://share.google/hDIRKOJj8jgsklwrn" target="_blank" class="review-box">
             <div class="review-stars">★★★★★</div>
             <div class="review-text">"Teneke motor yağlarında çeşit çok, fiyatlar çok makul. İlgi ve alaka için teşekkürler."</div>
-            <div class="review-author">
-                <div class="author-avatar">E</div>
-                <div class="author-name">Erkan D**</div>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="google-logo" alt="Google Logo">
-            </div>
+            <div class="review-author"><div class="author-avatar">E</div><div class="author-name">Erkan D**</div><img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="google-logo" alt="Google Logo"></div>
+        </a>
+
+        <a href="https://share.google/hDIRKOJj8jgsklwrn" target="_blank" class="review-box">
+            <div class="review-stars">★★★★★</div>
+            <div class="review-text">"Yağ değişimi için uğradım, beklediğimden çok daha kısa sürdü. İşçilikleri çok temiz, kullanılan malzemeler kaliteli. Fiyatlar da piyasaya göre gayet makul. Ellerinize sağlık."</div>
+            <div class="review-author"><div class="author-avatar">H</div><div class="author-name">Hasan T**</div><img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="google-logo" alt="Google Logo"></div>
+        </a>
+
+        <a href="https://share.google/hDIRKOJj8jgsklwrn" target="_blank" class="review-box">
+            <div class="review-stars">★★★★★</div>
+            <div class="review-text">"Sefa Bey olsun abisi olsun çok iyi güler yüzlü ve ilgililer."</div>
+            <div class="review-author"><div class="author-avatar">N</div><div class="author-name">Numb</div><img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="google-logo" alt="Google Logo"></div>
+        </a>
+
+        <a href="https://share.google/hDIRKOJj8jgsklwrn" target="_blank" class="review-box">
+            <div class="review-stars">★★★★★</div>
+            <div class="review-text">"Opel marka aracımı getirdiğim servis. Güler yüzlü karşılandım, Aracıma uygun yağ önerilerinden seçtiğim kullanıldı. Bundan sonra da tercih edeceğim"</div>
+            <div class="review-author"><div class="author-avatar">B</div><div class="author-name">Barış Emre A**</div><img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="google-logo" alt="Google Logo"></div>
+        </a>
+
+        <a href="https://share.google/hDIRKOJj8jgsklwrn" target="_blank" class="review-box">
+            <div class="review-stars">★★★★★</div>
+            <div class="review-text">"Madeni Yağ dedinmi Ankara Grup Madeni Yağ abi."</div>
+            <div class="review-author"><div class="author-avatar">U</div><div class="author-name">Umut E**</div><img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="google-logo" alt="Google Logo"></div>
+        </a>
+
+        <a href="https://share.google/hDIRKOJj8jgsklwrn" target="_blank" class="review-box">
+            <div class="review-stars">★★★★★</div>
+            <div class="review-text">"Esnaflıgıyla Güler yüzü karşılaması ile gerçekden güzel bir müessese çok yardımcı oldular buradan kendilerine tekrardan teşekkürlerimi sunuyorum böyle esnaflık bu dönemde kalmadı tebrik ederim sizi Karakaş Ticaret"</div>
+            <div class="review-author"><div class="author-avatar">Y</div><div class="author-name">Yunus D**</div><img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="google-logo" alt="Google Logo"></div>
+        </a>
+
+        <a href="https://share.google/hDIRKOJj8jgsklwrn" target="_blank" class="review-box">
+            <div class="review-stars">★★★★★</div>
+            <div class="review-text">"Çok güzel işletme esnaflıkları güleryüzlülükleri hoşgörüleri ile herkese tavsiye ederim"</div>
+            <div class="review-author"><div class="author-avatar">M</div><div class="author-name">Muhammet Ali Ö**</div><img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="google-logo" alt="Google Logo"></div>
+        </a>
+
+        <a href="https://share.google/hDIRKOJj8jgsklwrn" target="_blank" class="review-box">
+            <div class="review-stars">★★★★★</div>
+            <div class="review-text">"Son derece güvenilir ve güler yüzlüler. Bu devirde böyle esnafları görmek son derece mutlu ediyor."</div>
+            <div class="review-author"><div class="author-avatar">R</div><div class="author-name">Rusen G**</div><img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="google-logo" alt="Google Logo"></div>
+        </a>
+
+        <a href="https://share.google/hDIRKOJj8jgsklwrn" target="_blank" class="review-box">
+            <div class="review-stars">★★★★★</div>
+            <div class="review-text">"Çok iyi bir işletme satıcının kendiside çok iyi kesinlikle tavsiye ederim"</div>
+            <div class="review-author"><div class="author-avatar">İ</div><div class="author-name">İrem A**</div><img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="google-logo" alt="Google Logo"></div>
+        </a>
+
+        <a href="https://share.google/hDIRKOJj8jgsklwrn" target="_blank" class="review-box">
+            <div class="review-stars">★★★★★</div>
+            <div class="review-text">"Her zaman için ilk tercihiniz burası olmalı,çok teşekkür ederim."</div>
+            <div class="review-author"><div class="author-avatar">E</div><div class="author-name">Enes Ç**</div><img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="google-logo" alt="Google Logo"></div>
+        </a>
+
+        <a href="https://share.google/hDIRKOJj8jgsklwrn" target="_blank" class="review-box">
+            <div class="review-stars">★★★★★</div>
+            <div class="review-text">"Gayet kaliteli ve uygun fiyat"</div>
+            <div class="review-author"><div class="author-avatar">H</div><div class="author-name">Hüseyin S**</div><img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="google-logo" alt="Google Logo"></div>
+        </a>
+
+        <a href="https://share.google/hDIRKOJj8jgsklwrn" target="_blank" class="review-box">
+            <div class="review-stars">★★★★★</div>
+            <div class="review-text">"Güler yüzlü ve kaliteli bir işletme"</div>
+            <div class="review-author"><div class="author-avatar">T</div><div class="author-name">Tolga A**</div><img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="google-logo" alt="Google Logo"></div>
+        </a>
+
+        <a href="https://share.google/hDIRKOJj8jgsklwrn" target="_blank" class="review-box">
+            <div class="review-stars">★★★★★</div>
+            <div class="review-text">"Kaliteli işletme"</div>
+            <div class="review-author"><div class="author-avatar">E</div><div class="author-name">Emre V**</div><img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="google-logo" alt="Google Logo"></div>
         </a>
 
         <a href="https://share.google/hDIRKOJj8jgsklwrn" target="_blank" class="review-box">
             <div class="review-stars">★★★★★</div>
             <div class="review-text">"Ostim'de toptan yağ konusunda en uygun fiyatları buradan aldık. Teslimat çok hızlıydı, esnaflıkları on numara."</div>
-            <div class="review-author">
-                <div class="author-avatar">S</div>
-                <div class="author-name">Sefa K**</div>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="google-logo" alt="Google Logo">
-            </div>
+            <div class="review-author"><div class="author-avatar">V</div><div class="author-name">Vehbi P**</div><img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="google-logo" alt="Google Logo"></div>
         </a>
         
         <a href="https://share.google/hDIRKOJj8jgsklwrn" target="_blank" class="review-box">
             <div class="review-stars">★★★★★</div>
             <div class="review-text">"Şantiyemiz için varil gres alımı yaptık, aynı gün teslim ettiler. Bundan sonra tek adresimiz."</div>
-            <div class="review-author">
-                <div class="author-avatar">D</div>
-                <div class="author-name">Durmuş N*</div>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="google-logo" alt="Google Logo">
-            </div>
+            <div class="review-author"><div class="author-avatar">F</div><div class="author-name">Faruk Y**</div><img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="google-logo" alt="Google Logo"></div>
         </a>
 
         <a href="https://share.google/hDIRKOJj8jgsklwrn" target="_blank" class="review-box">
             <div class="review-stars">★★★★★</div>
             <div class="review-text">"Aradığımız 68 numara hidrolik yağını anında buldular. Çözüm odaklı ve güvenilir bir işletme."</div>
-            <div class="review-author">
-                <div class="author-avatar">M</div>
-                <div class="author-name">Mustafa K*</div>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="google-logo" alt="Google Logo">
-            </div>
+            <div class="review-author"><div class="author-avatar">M</div><div class="author-name">Mustafa K*</div><img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="google-logo" alt="Google Logo"></div>
         </a>
 
         <a href="https://share.google/hDIRKOJj8jgsklwrn" target="_blank" class="review-box">
             <div class="review-stars">★★★★★</div>
             <div class="review-text">"Teneke motor yağlarında çeşit çok, fiyatlar çok makul. İlgi ve alaka için teşekkürler."</div>
-            <div class="review-author">
-                <div class="author-avatar">E</div>
-                <div class="author-name">Erkan D**</div>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="google-logo" alt="Google Logo">
-            </div>
+            <div class="review-author"><div class="author-avatar">E</div><div class="author-name">Erkan D**</div><img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="google-logo" alt="Google Logo"></div>
+        </a>
+
+        <a href="https://share.google/hDIRKOJj8jgsklwrn" target="_blank" class="review-box">
+            <div class="review-stars">★★★★★</div>
+            <div class="review-text">"Yağ değişimi için uğradım, beklediğimden çok daha kısa sürdü. İşçilikleri çok temiz, kullanılan malzemeler kaliteli. Fiyatlar da piyasaya göre gayet makul. Ellerinize sağlık."</div>
+            <div class="review-author"><div class="author-avatar">H</div><div class="author-name">Hasan T**</div><img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="google-logo" alt="Google Logo"></div>
+        </a>
+
+        <a href="https://share.google/hDIRKOJj8jgsklwrn" target="_blank" class="review-box">
+            <div class="review-stars">★★★★★</div>
+            <div class="review-text">"Sefa Bey olsun abisi olsun çok iyi güler yüzlü ve ilgililer."</div>
+            <div class="review-author"><div class="author-avatar">N</div><div class="author-name">Numb</div><img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="google-logo" alt="Google Logo"></div>
+        </a>
+
+        <a href="https://share.google/hDIRKOJj8jgsklwrn" target="_blank" class="review-box">
+            <div class="review-stars">★★★★★</div>
+            <div class="review-text">"Opel marka aracımı getirdiğim servis. Güler yüzlü karşılandım, Aracıma uygun yağ önerilerinden seçtiğim kullanıldı. Bundan sonra da tercih edeceğim"</div>
+            <div class="review-author"><div class="author-avatar">B</div><div class="author-name">Barış Emre A**</div><img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="google-logo" alt="Google Logo"></div>
+        </a>
+
+        <a href="https://share.google/hDIRKOJj8jgsklwrn" target="_blank" class="review-box">
+            <div class="review-stars">★★★★★</div>
+            <div class="review-text">"Madeni Yağ dedinmi Ankara Grup Madeni Yağ abi."</div>
+            <div class="review-author"><div class="author-avatar">U</div><div class="author-name">Umut E**</div><img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="google-logo" alt="Google Logo"></div>
+        </a>
+
+        <a href="https://share.google/hDIRKOJj8jgsklwrn" target="_blank" class="review-box">
+            <div class="review-stars">★★★★★</div>
+            <div class="review-text">"Esnaflıgıyla Güler yüzü karşılaması ile gerçekden güzel bir müessese çok yardımcı oldular buradan kendilerine tekrardan teşekkürlerimi sunuyorum böyle esnaflık bu dönemde kalmadı tebrik ederim sizi Karakaş Ticaret"</div>
+            <div class="review-author"><div class="author-avatar">Y</div><div class="author-name">Yunus D**</div><img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="google-logo" alt="Google Logo"></div>
+        </a>
+
+        <a href="https://share.google/hDIRKOJj8jgsklwrn" target="_blank" class="review-box">
+            <div class="review-stars">★★★★★</div>
+            <div class="review-text">"Çok güzel işletme esnaflıkları güleryüzlülükleri hoşgörüleri ile herkese tavsiye ederim"</div>
+            <div class="review-author"><div class="author-avatar">M</div><div class="author-name">Muhammet Ali Ö**</div><img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="google-logo" alt="Google Logo"></div>
+        </a>
+
+        <a href="https://share.google/hDIRKOJj8jgsklwrn" target="_blank" class="review-box">
+            <div class="review-stars">★★★★★</div>
+            <div class="review-text">"Son derece güvenilir ve güler yüzlüler. Bu devirde böyle esnafları görmek son derece mutlu ediyor."</div>
+            <div class="review-author"><div class="author-avatar">R</div><div class="author-name">Rusen G**</div><img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="google-logo" alt="Google Logo"></div>
+        </a>
+
+        <a href="https://share.google/hDIRKOJj8jgsklwrn" target="_blank" class="review-box">
+            <div class="review-stars">★★★★★</div>
+            <div class="review-text">"Çok iyi bir işletme satıcının kendiside çok iyi kesinlikle tavsiye ederim"</div>
+            <div class="review-author"><div class="author-avatar">İ</div><div class="author-name">İrem A**</div><img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="google-logo" alt="Google Logo"></div>
+        </a>
+
+        <a href="https://share.google/hDIRKOJj8jgsklwrn" target="_blank" class="review-box">
+            <div class="review-stars">★★★★★</div>
+            <div class="review-text">"Her zaman için ilk tercihiniz burası olmalı,çok teşekkür ederim."</div>
+            <div class="review-author"><div class="author-avatar">E</div><div class="author-name">Enes Ç**</div><img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="google-logo" alt="Google Logo"></div>
+        </a>
+
+        <a href="https://share.google/hDIRKOJj8jgsklwrn" target="_blank" class="review-box">
+            <div class="review-stars">★★★★★</div>
+            <div class="review-text">"Gayet kaliteli ve uygun fiyat"</div>
+            <div class="review-author"><div class="author-avatar">H</div><div class="author-name">Hüseyin S**</div><img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="google-logo" alt="Google Logo"></div>
+        </a>
+
+        <a href="https://share.google/hDIRKOJj8jgsklwrn" target="_blank" class="review-box">
+            <div class="review-stars">★★★★★</div>
+            <div class="review-text">"Güler yüzlü ve kaliteli bir işletme"</div>
+            <div class="review-author"><div class="author-avatar">T</div><div class="author-name">Tolga A**</div><img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="google-logo" alt="Google Logo"></div>
+        </a>
+
+        <a href="https://share.google/hDIRKOJj8jgsklwrn" target="_blank" class="review-box">
+            <div class="review-stars">★★★★★</div>
+            <div class="review-text">"Kaliteli işletme"</div>
+            <div class="review-author"><div class="author-avatar">E</div><div class="author-name">Emre V**</div><img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="google-logo" alt="Google Logo"></div>
         </a>
 
     </div>
 </div>
-        <div class="products-area">
+<div class="products-area">
             <div id="product-list" class="product-list">
                 <div style="text-align:center; padding: 60px 20px; color:var(--text-muted); background: #fff; border: 2px dashed var(--border); border-radius: var(--radius); font-size: 16px; font-weight: 600;">
                     Sizin için en uygun ürünleri listelemek için lütfen yukarıdaki menüden bir kategori seçin.
