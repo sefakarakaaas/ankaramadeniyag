@@ -4,39 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Toptan Madeni Yağ Fiyat Listesi | Ankara Ostim Depo</title>
-    <meta name="description" content="Ankara toptan madeni yağ, varil hidrolik yağı, kauçuklu gres, 10w40 bidon ve teneke toptan satış fiyat listesi. İş makineleri ve sanayi yağları.">
+    <meta name="description" content="Ankara toptan madeni yağ, varil hidrolik yağı, kauçuklu gres, 10w40 bidon ve teneke toptan satış fiyat listesi.">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-        :root { --primary: #0f2027; --accent: #2c5364; --action: #f59e0b; --whatsapp: #10b981; --light: #f8fafc; --border: #e2e8f0; }
+        :root { 
+            --primary: #0f2027; 
+            --accent: #f59e0b; 
+            --whatsapp: #10b981; 
+            --light: #f8fafc; 
+            --border: #e2e8f0; 
+            --text-muted: #64748b;
+            --radius: 12px;
+            --shadow-lg: 0 10px 25px rgba(0,0,0,0.1);
+        }
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
         body { background: var(--light); color: #1e293b; line-height: 1.6; }
-        header { background: var(--primary); color: white; padding: 40px 20px; text-align: center; }
-        header h1 { margin-bottom: 10px; font-size: 32px; }
-        header p { opacity: 0.9; font-size: 16px; }
-        
-        .container { max-width: 1200px; margin: -30px auto 40px; padding: 0 20px; position: relative; z-index: 10; }
+        a { text-decoration: none; }
+
+        /* --- ÜST BİLGİ BARI (TOP BAR) --- */
+        .top-bar { background: var(--primary); color: white; padding: 12px 20px; display: flex; justify-content: space-between; align-items: center; font-size: 13px; }
+        .top-bar-left { display: flex; align-items: center; gap: 8px; }
+        .top-bar-right { display: flex; gap: 15px; align-items: center; }
+        .top-contact { color: white; font-weight: 600; }
+        .btn-top-wa { background: var(--whatsapp); color: white; padding: 6px 15px; border-radius: 20px; font-weight: 600; display: flex; align-items: center; gap: 5px;}
+        .btn-top-map { background: var(--accent); color: white; padding: 6px 15px; border-radius: 20px; font-weight: 600; display: flex; align-items: center; gap: 5px;}
+        .btn-top-wa:hover { background: #059669; }
+        .btn-top-map:hover { background: #d97706; }
+
+        /* --- ANA MENÜ (HEADER) --- */
+        .main-nav { background: white; padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100;}
+        .logo { font-size: 24px; font-weight: 700; color: var(--primary); }
+        .nav-links { display: flex; gap: 30px; align-items: center; }
+        .nav-link { color: #475569; font-weight: 600; font-size: 15px; transition: 0.2s; }
+        .nav-link:hover { color: var(--primary); }
+        .nav-active { background: var(--primary); color: white; padding: 10px 20px; border-radius: 8px; font-weight: 700; box-shadow: 0 4px 6px rgba(15, 32, 39, 0.2); }
+        .nav-active:hover { background: #1e3a47; color: white; }
+
+        /* --- İÇERİK ALANI --- */
+        .container { max-width: 1200px; margin: 40px auto; padding: 0 20px; }
         
         /* Arama Çubuğu */
-        .search-box { background: white; padding: 20px; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); margin-bottom: 40px; border: 1px solid var(--border); }
+        .search-box { background: white; padding: 20px; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); margin-bottom: 40px; border: 1px solid var(--border); }
         #productSearch { width: 100%; padding: 18px; border: 2px solid var(--border); border-radius: 8px; font-size: 18px; outline: none; transition: 0.3s; }
-        #productSearch:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(44, 83, 100, 0.2); }
+        #productSearch:focus { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(15, 32, 39, 0.1); }
 
-        /* Kategori Grupları */
+        /* Kategoriler ve Ürün Kartları */
         .category-group { margin-bottom: 50px; }
-        .category-title { font-size: 26px; font-weight: 700; color: var(--primary); border-bottom: 3px solid var(--action); display: inline-block; margin-bottom: 25px; padding-bottom: 5px; }
+        .category-title { font-size: 26px; font-weight: 700; color: var(--primary); border-bottom: 3px solid var(--accent); display: inline-block; margin-bottom: 25px; padding-bottom: 5px; }
         
-        /* Ürün Grid */
         .product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
         .product-card { background: white; border: 1px solid var(--border); padding: 20px; border-radius: 10px; transition: 0.3s; display: flex; flex-direction: column; justify-content: space-between; }
         .product-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.08); border-color: #cbd5e1; }
         .product-card h3 { font-size: 16px; margin: 0 0 15px 0; color: #0f172a; line-height: 1.4; }
         
-        /* Butonlar */
-        /* Butonlar */
-        .btn-view { display: block; text-align: center; background: var(--whatsapp); color: white; padding: 12px; border-radius: 6px; font-weight: 600; text-decoration: none; font-size: 14px; transition: 0.2s; border: none; box-shadow: 0 4px 6px rgba(16, 185, 129, 0.2); }
-        .btn-view:hover { background: #059669; transform: translateY(-2px); }
-        .btn-wa { background: var(--whatsapp); color: white; border: none; }
-        .btn-wa:hover { background: #059669; color: white; }
+        /* Butonlar (HEPSİ YEŞİL) */
+        .btn-view { display: block; text-align: center; background: var(--whatsapp); color: white; padding: 12px; border-radius: 6px; font-weight: 600; font-size: 14px; transition: 0.2s; border: none; box-shadow: 0 4px 6px rgba(16, 185, 129, 0.2); }
+        .btn-view:hover { background: #059669; transform: translateY(-2px); box-shadow: 0 6px 8px rgba(16, 185, 129, 0.3); }
 
         /* Renkli Etiketler */
         .tag { font-size: 11px; font-weight: 700; text-transform: uppercase; padding: 4px 8px; border-radius: 4px; margin-bottom: 12px; display: inline-block; letter-spacing: 0.5px; }
@@ -49,16 +72,36 @@
         .tag-motor-tin { background: #e0e7ff; color: #3730a3; }
         .tag-spec { background: #f1f5f9; color: #334155; }
         
-        .nav-home { display: inline-block; margin-top: 15px; color: white; text-decoration: underline; font-size: 14px; }
+        @media (max-width: 768px) {
+            .top-bar { flex-direction: column; gap: 10px; text-align: center; }
+            .top-bar-right { flex-wrap: wrap; justify-content: center; }
+            .main-nav { flex-direction: column; gap: 15px; padding: 15px; }
+            .nav-links { flex-wrap: wrap; justify-content: center; gap: 15px; }
+        }
     </style>
 </head>
 <body>
 
-<header>
-    <h1>Toptan Madeni Yağ Kataloğu</h1>
-    <p>Ostim Merkezli Depomuzdan Fabrika, Şantiye ve Servislere Toptan Tedarik</p>
-    <a href="index.html" class="nav-home">← Ana Sayfaya Dön</a>
-</header>
+<div class="top-bar">
+    <div class="top-bar-left">
+        📍 1229 Sokak No:7 Ostim Yenimahalle / ANKARA
+    </div>
+    <div class="top-bar-right">
+        <span class="top-contact">📞 Bizi Arayın: 0501 542 14 22</span>
+        <a href="https://wa.me/905015421422" class="btn-top-wa">💬 WhatsApp'tan Mesaj At</a>
+        <a href="https://share.google/hDIRKOJj8jgsklwrn" class="btn-top-map">📍 Yol Tarifi Al</a>
+    </div>
+</div>
+
+<nav class="main-nav">
+    <div class="logo">Ankara Madeni Yağ</div>
+    <div class="nav-links">
+        <a href="index.html" class="nav-link">Ana Sayfa</a>
+        <a href="index.html" class="nav-link">Ürünlerimiz</a>
+        <a href="toptan.html" class="nav-link nav-active">📦 Toptan Sipariş</a>
+        <a href="iletisim.html" class="nav-link">İletişim</a>
+    </div>
+</nav>
 
 <div class="container">
     <div class="search-box">
@@ -72,17 +115,8 @@
             <div class="product-card"><span class="tag tag-hyd">68 Numara Hidrolik</span><h3>Shell Tellus S2 M 68 (Varil/Teneke)</h3><a href="blog-shell-tellus-s2m-68.html" class="btn-view">İncele & Teklif Al</a></div>
             <div class="product-card"><span class="tag tag-hyd">46 Numara Hidrolik</span><h3>Castrol Hyspin AWS 46 (Varil)</h3><a href="blog-castrol-hyspin-aws-46.html" class="btn-view">İncele & Teklif Al</a></div>
             <div class="product-card"><span class="tag tag-hyd">32 Numara Hidrolik</span><h3>Petrol Ofisi Hydro Tech 32 (Varil)</h3><a href="blog-petrol-ofisi-hydro-tech-32.html" class="btn-view">İncele & Teklif Al</a></div>
-            <div class="product-card"><span class="tag tag-hyd">46 Numara Hidrolik</span><h3>Borax Hydraulic 46 (Varil)</h3><a href="blog-borax-hydraulic-46.html" class="btn-view">İncele & Teklif Al</a></div>
-            <div class="product-card"><span class="tag tag-hyd">46 Numara Hidrolik</span><h3>Texaco Rando HD 46 (Varil)</h3><a href="blog-texaco-rando-hd-46.html" class="btn-view">İncele & Teklif Al</a></div>
-            <div class="product-card"><span class="tag tag-hyd">46 Numara Hidrolik</span><h3>Rivinol Hydraulic ISO 46 (Varil)</h3><a href="blog-rivinol-hydraulic-iso-46.html" class="btn-view">İncele & Teklif Al</a></div>
-            
-            <div class="product-card"><span class="tag tag-hyd">32 Numara Hidrolik</span><h3>Shell Tellus S2 M 32 (Varil)</h3><a href="https://wa.me/905015421422?text=Shell%20Tellus%2032%20toptan%20fiyatı%20alabilir%20miyim?" class="btn-view btn-wa">Hızlı Teklif İste</a></div>
-            <div class="product-card"><span class="tag tag-hyd">46 Numara Hidrolik</span><h3>Petrol Ofisi Hydro Tech 46 (Varil)</h3><a href="https://wa.me/905015421422?text=PO%20Hydro%20Tech%2046%20toptan%20fiyatı%20alabilir%20miyim?" class="btn-view btn-wa">Hızlı Teklif İste</a></div>
-            <div class="product-card"><span class="tag tag-hyd">68 Numara Hidrolik</span><h3>Petrol Ofisi Hydro Tech 68 (Varil)</h3><a href="https://wa.me/905015421422?text=PO%20Hydro%20Tech%2068%20toptan%20fiyatı%20alabilir%20miyim?" class="btn-view btn-wa">Hızlı Teklif İste</a></div>
-            <div class="product-card"><span class="tag tag-hyd">46 Numara Hidrolik</span><h3>Mobil DTE 25 (Varil)</h3><a href="https://wa.me/905015421422?text=Mobil%20DTE%2025%20(46%20numara)%20toptan%20fiyatı%20alabilir%20miyim?" class="btn-view btn-wa">Hızlı Teklif İste</a></div>
-            <div class="product-card"><span class="tag tag-hyd">68 Numara Hidrolik</span><h3>Mobil DTE 26 (Varil)</h3><a href="https://wa.me/905015421422?text=Mobil%20DTE%2026%20(68%20numara)%20toptan%20fiyatı%20alabilir%20miyim?" class="btn-view btn-wa">Hızlı Teklif İste</a></div>
-            <div class="product-card"><span class="tag tag-hyd">46 Numara Hidrolik</span><h3>Lubex Hydrolub 46 (Varil/Teneke)</h3><a href="https://wa.me/905015421422?text=Lubex%20Hydrolub%2046%20toptan%20fiyatı%20alabilir%20miyim?" class="btn-view btn-wa">Hızlı Teklif İste</a></div>
-            <div class="product-card"><span class="tag tag-hyd">46 Numara Hidrolik</span><h3>Total Azolla ZS 46 (Varil)</h3><a href="https://wa.me/905015421422?text=Total%20Azolla%2046%20toptan%20fiyatı%20alabilir%20miyim?" class="btn-view btn-wa">Hızlı Teklif İste</a></div>
+            <div class="product-card"><span class="tag tag-hyd">46 Numara Hidrolik</span><h3>Mobil DTE 25 (Varil)</h3><a href="https://wa.me/905015421422?text=Mobil%20DTE%2025%20(46%20numara)%20toptan%20fiyatı%20alabilir%20miyim?" class="btn-view">Hızlı Teklif İste</a></div>
+            <div class="product-card"><span class="tag tag-hyd">68 Numara Hidrolik</span><h3>Petrol Ofisi Hydro Tech 68 (Varil)</h3><a href="https://wa.me/905015421422?text=PO%20Hydro%20Tech%2068%20toptan%20fiyatı%20alabilir%20miyim?" class="btn-view">Hızlı Teklif İste</a></div>
         </div>
     </div>
 
@@ -92,31 +126,19 @@
             <div class="product-card"><span class="tag tag-gres-yel">Sarı Gres - EP2</span><h3>Shell Gadus S2 V220 (18Kg / 180Kg)</h3><a href="blog-shell-gadus-s2-v220.html" class="btn-view">İncele & Teklif Al</a></div>
             <div class="product-card"><span class="tag tag-gres-yel">Sarı Gres - EP2</span><h3>Petrol Ofisi Süper Gres EP 2 (Kova/Varil)</h3><a href="blog-petrol-ofisi-super-gres-ep2.html" class="btn-view">İncele & Teklif Al</a></div>
             <div class="product-card"><span class="tag tag-gres-red">Kırmızı Gres - Kauçuklu</span><h3>Borax Red Rubber Kırmızı Gres (15Kg)</h3><a href="blog-borax-red-rubber-grease.html" class="btn-view">İncele & Teklif Al</a></div>
-            
-            <div class="product-card"><span class="tag tag-gres-red">Kırmızı Gres - Kauçuklu</span><h3>Petrol Ofisi Kırmızı Gres (15Kg)</h3><a href="https://wa.me/905015421422?text=PO%20Kırmızı%20Gres%20kova%20toptan%20fiyatı%20alabilir%20miyim?" class="btn-view btn-wa">Hızlı Teklif İste</a></div>
-            <div class="product-card"><span class="tag tag-gres-grn">Yeşil Gres - Kalsiyum</span><h3>Petrol Ofisi Yeşil Gres 3 (15Kg)</h3><a href="https://wa.me/905015421422?text=PO%20Yeşil%20Gres%20kova%20toptan%20fiyatı%20alabilir%20miyim?" class="btn-view btn-wa">Hızlı Teklif İste</a></div>
-            <div class="product-card"><span class="tag tag-gres-yel">Sarı Gres - EP3</span><h3>Shell Gadus S2 V220 3 (18Kg)</h3><a href="https://wa.me/905015421422?text=Shell%20Gadus%20EP3%20kova%20toptan%20fiyatı%20alabilir%20miyim?" class="btn-view btn-wa">Hızlı Teklif İste</a></div>
-            <div class="product-card"><span class="tag tag-gres-yel">Sarı Gres - Lityum</span><h3>Castrol Spheerol EPL 2 (18Kg)</h3><a href="https://wa.me/905015421422?text=Castrol%20Spheerol%20EP2%20kova%20toptan%20fiyatı%20alabilir%20miyim?" class="btn-view btn-wa">Hızlı Teklif İste</a></div>
-            <div class="product-card"><span class="tag tag-gres-red">Kırmızı Gres - Kauçuklu</span><h3>Lubex Kırmızı Gres Kauçuklu (15Kg)</h3><a href="https://wa.me/905015421422?text=Lubex%20Kırmızı%20Gres%20kova%20toptan%20fiyatı%20alabilir%20miyim?" class="btn-view btn-wa">Hızlı Teklif İste</a></div>
-            <div class="product-card"><span class="tag tag-gres-grn">Yeşil Gres - Suya Dirençli</span><h3>Moil Kalsiyumlu Yeşil Gres (15Kg)</h3><a href="https://wa.me/905015421422?text=Moil%20Yeşil%20Gres%20kova%20toptan%20fiyatı%20alabilir%20miyim?" class="btn-view btn-wa">Hızlı Teklif İste</a></div>
-            <div class="product-card"><span class="tag tag-gres-yel">Sarı Gres - Yüksek Isı</span><h3>Mobilgrease XHP 222 (Mavi/Sarı Isıya Dayanıklı)</h3><a href="https://wa.me/905015421422?text=Mobilgrease%20XHP%20222%20kova%20toptan%20fiyatı%20alabilir%20miyim?" class="btn-view btn-wa">Hızlı Teklif İste</a></div>
+            <div class="product-card"><span class="tag tag-gres-red">Kırmızı Gres - Kauçuklu</span><h3>Petrol Ofisi Kırmızı Gres (15Kg)</h3><a href="https://wa.me/905015421422?text=PO%20Kırmızı%20Gres%20kova%20toptan%20fiyatı%20alabilir%20miyim?" class="btn-view">Hızlı Teklif İste</a></div>
+            <div class="product-card"><span class="tag tag-gres-grn">Yeşil Gres - Kalsiyum</span><h3>Petrol Ofisi Yeşil Gres 3 (15Kg)</h3><a href="https://wa.me/905015421422?text=PO%20Yeşil%20Gres%20kova%20toptan%20fiyatı%20alabilir%20miyim?" class="btn-view">Hızlı Teklif İste</a></div>
+            <div class="product-card"><span class="tag tag-gres-yel">Sarı Gres - Yüksek Isı</span><h3>Mobilgrease XHP 222 (Isıya Dayanıklı)</h3><a href="https://wa.me/905015421422?text=Mobilgrease%20XHP%20222%20kova%20toptan%20fiyatı%20alabilir%20miyim?" class="btn-view">Hızlı Teklif İste</a></div>
         </div>
     </div>
 
     <div class="category-group">
-        <div class="category-title">Şanzıman ve Dişli Yağları (80, 90, 140, 80W90)</div>
+        <div class="category-title">Şanzıman ve Dişli Yağları (80, 90, 140)</div>
         <div class="product-grid">
             <div class="product-card"><span class="tag tag-gear">90 Numara Yağ</span><h3>Petrol Ofisi Dişli Yağı EP 90 (Varil/Teneke)</h3><a href="blog-petrol-ofisi-disli-ep-90.html" class="btn-view">İncele & Teklif Al</a></div>
             <div class="product-card"><span class="tag tag-gear">80 Numara Yağ</span><h3>Moil Gear 80 (Varil/Teneke)</h3><a href="blog-moil-gear-80.html" class="btn-view">İncele & Teklif Al</a></div>
             <div class="product-card"><span class="tag tag-gear">80W-90 Dişli Yağı</span><h3>Castrol Transmax Axle EPX 80W-90</h3><a href="blog-castrol-transmax-80w90.html" class="btn-view">İncele & Teklif Al</a></div>
-            <div class="product-card"><span class="tag tag-gear">80W-90 Dişli Yağı</span><h3>Shell Spirax S2 A 80W-90</h3><a href="blog-shell-spirax-s2-a-80w90.html" class="btn-view">İncele & Teklif Al</a></div>
-            <div class="product-card"><span class="tag tag-gear">ATF Otomatik</span><h3>Castrol Transmax ATF Z</h3><a href="blog-castrol-transmax-atf-z.html" class="btn-view">İncele & Teklif Al</a></div>
-
-            <div class="product-card"><span class="tag tag-gear">140 Numara Yağ</span><h3>Petrol Ofisi Dişli Yağı EP 140 (Varil/Teneke)</h3><a href="https://wa.me/905015421422?text=PO%20EP%20140%20dişli%20yağı%20toptan%20fiyatı%20alabilir%20miyim?" class="btn-view btn-wa">Hızlı Teklif İste</a></div>
-            <div class="product-card"><span class="tag tag-gear">140 Numara Yağ</span><h3>Shell Spirax S2 A 140 (Varil)</h3><a href="https://wa.me/905015421422?text=Shell%20Spirax%20140%20toptan%20fiyatı%20alabilir%20miyim?" class="btn-view btn-wa">Hızlı Teklif İste</a></div>
-            <div class="product-card"><span class="tag tag-gear">75W-90 Sentetik</span><h3>Castrol Transmax Manual 75W-90 (Koli/Varil)</h3><a href="https://wa.me/905015421422?text=Castrol%2075W90%20şanzıman%20yağı%20toptan%20fiyatı%20alabilir%20miyim?" class="btn-view btn-wa">Hızlı Teklif İste</a></div>
-            <div class="product-card"><span class="tag tag-gear">85W-140 Dişli</span><h3>Mobilube HD 85W-140 (Varil)</h3><a href="https://wa.me/905015421422?text=Mobilube%2085W140%20toptan%20fiyatı%20alabilir%20miyim?" class="btn-view btn-wa">Hızlı Teklif İste</a></div>
-            <div class="product-card"><span class="tag tag-gear">ATF Otomatik</span><h3>Petrol Ofisi ATF DX III (Dexron 3 - Koli/Varil)</h3><a href="https://wa.me/905015421422?text=PO%20ATF%20DX%203%20toptan%20fiyatı%20alabilir%20miyim?" class="btn-view btn-wa">Hızlı Teklif İste</a></div>
+            <div class="product-card"><span class="tag tag-gear">140 Numara Yağ</span><h3>Petrol Ofisi Dişli Yağı EP 140 (Varil/Teneke)</h3><a href="https://wa.me/905015421422?text=PO%20EP%20140%20dişli%20yağı%20toptan%20fiyatı%20alabilir%20miyim?" class="btn-view">Hızlı Teklif İste</a></div>
         </div>
     </div>
 
@@ -125,54 +147,65 @@
         <div class="product-grid">
             <div class="product-card"><span class="tag tag-spec">422 Yağ / UTTO</span><h3>Mobilfluid 422 (Teneke/Varil)</h3><a href="blog-mobilfluid-422.html" class="btn-view">İncele & Teklif Al</a></div>
             <div class="product-card"><span class="tag tag-spec">10 Numara Yağ</span><h3>Petrol Ofisi Gresy 10 (Teneke/Varil)</h3><a href="blog-petrol-ofisi-gresy-10.html" class="btn-view">İncele & Teklif Al</a></div>
-            
-            <div class="product-card"><span class="tag tag-spec">UTTO Traktör</span><h3>Shell Spirax S4 TXM (Teneke/Varil)</h3><a href="https://wa.me/905015421422?text=Shell%20Spirax%20TXM%20(UTTO)%20toptan%20fiyatı%20alabilir%20miyim?" class="btn-view btn-wa">Hızlı Teklif İste</a></div>
-            <div class="product-card"><span class="tag tag-spec">UTTO Traktör</span><h3>Petrol Ofisi Traktör Yağı (Teneke/Varil)</h3><a href="https://wa.me/905015421422?text=PO%20Traktör%20Yağı%20(UTTO)%20toptan%20fiyatı%20alabilir%20miyim?" class="btn-view btn-wa">Hızlı Teklif İste</a></div>
-            <div class="product-card"><span class="tag tag-spec">UTTO Traktör</span><h3>Castrol Agri Trans Plus 80W (Varil)</h3><a href="https://wa.me/905015421422?text=Castrol%20Agri%20Trans%20Plus%20toptan%20fiyatı%20alabilir%20miyim?" class="btn-view btn-wa">Hızlı Teklif İste</a></div>
-            <div class="product-card"><span class="tag tag-spec">10 Numara Yağ</span><h3>Shell Rimula R2 10W (Varil)</h3><a href="https://wa.me/905015421422?text=Shell%20Rimula%2010W%20(10%20numara)%20toptan%20fiyatı%20alabilir%20miyim?" class="btn-view btn-wa">Hızlı Teklif İste</a></div>
-            <div class="product-card"><span class="tag tag-spec">AdBlue / SCR</span><h3>Borax AdBlue Solutions (IBC Tank / Dökme)</h3><a href="blog-borax-adblue-solutions.html" class="btn-view">İncele & Teklif Al</a></div>
-            <div class="product-card"><span class="tag tag-spec">AdBlue / SCR</span><h3>Petrol Ofisi V-Blue AdBlue (18L/IBC)</h3><a href="blog-petrol-ofisi-v-blue-adblue.html" class="btn-view">İncele & Teklif Al</a></div>
+            <div class="product-card"><span class="tag tag-spec">UTTO Traktör</span><h3>Shell Spirax S4 TXM (Teneke/Varil)</h3><a href="https://wa.me/905015421422?text=Shell%20Spirax%20TXM%20(UTTO)%20toptan%20fiyatı%20alabilir%20miyim?" class="btn-view">Hızlı Teklif İste</a></div>
+            <div class="product-card"><span class="tag tag-spec">AdBlue / SCR</span><h3>Borax AdBlue Solutions (IBC Tank)</h3><a href="blog-borax-adblue-solutions.html" class="btn-view">İncele & Teklif Al</a></div>
         </div>
     </div>
 
     <div class="category-group">
-        <div class="category-title">Ağır Vasıta Teneke ve Varil Grubu (15W40, 20W50)</div>
+        <div class="category-title">Ağır Vasıta ve Binek Motor Yağları (10W40, 15W40, 20W50)</div>
         <div class="product-grid">
+            <div class="product-card"><span class="tag tag-motor-tin">15W-40 Teneke</span><h3>Castrol Vecton 15W-40 (Teneke)</h3><a href="https://wa.me/905015421422?text=Castrol%20Vecton%2015W40%20teneke%20toptan%20fiyatı%20alabilir%20miyim?" class="btn-view">Hızlı Teklif İste</a></div>
+            <div class="product-card"><span class="tag tag-motor-tin">20W-50 Teneke</span><h3>Petrol Ofisi Maximus 20W-50 (Teneke)</h3><a href="https://wa.me/905015421422?text=PO%20Maximus%2020W50%20teneke%20toptan%20fiyatı%20alabilir%20miyim?" class="btn-view">Hızlı Teklif İste</a></div>
             <div class="product-card"><span class="tag tag-motor-tin">30 Numara Yağ</span><h3>Shell Rimula R2 30 (Varil/Teneke)</h3><a href="blog-shell-rimula-r2-30.html" class="btn-view">İncele & Teklif Al</a></div>
-            
-            <div class="product-card"><span class="tag tag-motor-tin">15W-40 Teneke</span><h3>Castrol Vecton 15W-40 (16L/18L Teneke)</h3><a href="https://wa.me/905015421422?text=Castrol%20Vecton%2015W40%20teneke%20toptan%20fiyatı%20alabilir%20miyim?" class="btn-view btn-wa">Hızlı Teklif İste</a></div>
-            <div class="product-card"><span class="tag tag-motor-tin">15W-40 Teneke</span><h3>Shell Rimula R4 X 15W-40 (Teneke/Varil)</h3><a href="https://wa.me/905015421422?text=Shell%20Rimula%2015W40%20teneke%20toptan%20fiyatı%20alabilir%20miyim?" class="btn-view btn-wa">Hızlı Teklif İste</a></div>
-            <div class="product-card"><span class="tag tag-motor-tin">15W-40 Teneke</span><h3>Petrol Ofisi Maximus 15W-40 (Teneke/Varil)</h3><a href="https://wa.me/905015421422?text=PO%20Maximus%2015W40%20teneke%20toptan%20fiyatı%20alabilir%20miyim?" class="btn-view btn-wa">Hızlı Teklif İste</a></div>
-            <div class="product-card"><span class="tag tag-motor-tin">15W-40 Teneke</span><h3>Mobil Delvac MX 15W-40 (Teneke/Varil)</h3><a href="https://wa.me/905015421422?text=Mobil%20Delvac%2015W40%20teneke%20toptan%20fiyatı%20alabilir%20miyim?" class="btn-view btn-wa">Hızlı Teklif İste</a></div>
-            
-            <div class="product-card"><span class="tag tag-motor-tin">20W-50 Teneke</span><h3>Petrol Ofisi Maximus 20W-50 (Teneke/Varil)</h3><a href="https://wa.me/905015421422?text=PO%20Maximus%2020W50%20teneke%20toptan%20fiyatı%20alabilir%20miyim?" class="btn-view btn-wa">Hızlı Teklif İste</a></div>
-            <div class="product-card"><span class="tag tag-motor-tin">20W-50 Teneke</span><h3>Castrol CRB Turbomax 20W-50 (Teneke/Varil)</h3><a href="https://wa.me/905015421422?text=Castrol%20CRB%2020W50%20teneke%20toptan%20fiyatı%20alabilir%20miyim?" class="btn-view btn-wa">Hızlı Teklif İste</a></div>
-            <div class="product-card"><span class="tag tag-motor-tin">20W-50 Teneke</span><h3>Lubex Robus 20W-50 (Teneke/Varil)</h3><a href="https://wa.me/905015421422?text=Lubex%2020W50%20teneke%20toptan%20fiyatı%20alabilir%20miyim?" class="btn-view btn-wa">Hızlı Teklif İste</a></div>
-            
-            <div class="product-card"><span class="tag tag-motor-tin">10W-40 Teneke</span><h3>Shell Rimula R6 LM 10W-40 (Sentetik Teneke)</h3><a href="https://wa.me/905015421422?text=Shell%20Rimula%2010W40%20teneke%20toptan%20fiyatı%20alabilir%20miyim?" class="btn-view btn-wa">Hızlı Teklif İste</a></div>
-            <div class="product-card"><span class="tag tag-motor-tin">10W-40 Teneke</span><h3>Mobil Delvac XHP 10W-40 (Teneke/Varil)</h3><a href="https://wa.me/905015421422?text=Mobil%20Delvac%2010W40%20teneke%20toptan%20fiyatı%20alabilir%20miyim?" class="btn-view btn-wa">Hızlı Teklif İste</a></div>
-        </div>
-    </div>
-
-    <div class="category-group">
-        <div class="category-title">Binek ve Hafif Ticari Bidon Grubu (Koli Bazlı Toptan)</div>
-        <div class="product-grid">
-            <div class="product-card"><span class="tag tag-motor-can">10W-40 Bidon</span><h3>Castrol Magnatec 10W-40 (4L/5L/7L Koli)</h3><a href="blog-castrol-magnatec-10w40.html" class="btn-view">İncele & Teklif Al</a></div>
-            <div class="product-card"><span class="tag tag-motor-can">10W-40 Bidon</span><h3>Moil Motor 10W-40 (Koli Satışı)</h3><a href="blog-moil-motor-10w40.html" class="btn-view">İncele & Teklif Al</a></div>
-            <div class="product-card"><span class="tag tag-motor-can">10W-40 Bidon</span><h3>Petrol Ofisi Maxima 10W-40 (Koli Satışı)</h3><a href="blog-petrol-ofisi-maxima-10w40.html" class="btn-view">İncele & Teklif Al</a></div>
+            <div class="product-card"><span class="tag tag-motor-can">10W-40 Bidon</span><h3>Castrol Magnatec 10W-40 (Koli Satışı)</h3><a href="blog-castrol-magnatec-10w40.html" class="btn-view">İncele & Teklif Al</a></div>
             <div class="product-card"><span class="tag tag-motor-can">5W-30 Bidon</span><h3>Shell Helix Ultra 5W-30 (Koli Satışı)</h3><a href="blog-shell-helix-ultra-5w30.html" class="btn-view">İncele & Teklif Al</a></div>
-            <div class="product-card"><span class="tag tag-motor-can">5W-30 Bidon</span><h3>Mobil 1 ESP 5W-30 (Koli Satışı)</h3><a href="blog-mobil-1-esp-5w30.html" class="btn-view">İncele & Teklif Al</a></div>
-            
-            <div class="product-card"><span class="tag tag-motor-can">10W-40 Bidon</span><h3>Shell Helix HX7 10W-40 (4L Koli)</h3><a href="https://wa.me/905015421422?text=Shell%20Helix%2010W40%20koli%20toptan%20fiyatı%20alabilir%20miyim?" class="btn-view btn-wa">Hızlı Teklif İste</a></div>
-            <div class="product-card"><span class="tag tag-motor-can">10W-40 Bidon</span><h3>Mobil Super 2000 10W-40 (4L Koli)</h3><a href="https://wa.me/905015421422?text=Mobil%20Super%2010W40%20koli%20toptan%20fiyatı%20alabilir%20miyim?" class="btn-view btn-wa">Hızlı Teklif İste</a></div>
-            <div class="product-card"><span class="tag tag-motor-can">10W-40 Bidon</span><h3>Elf Evolution 700 10W-40 (4L/5L Koli)</h3><a href="https://wa.me/905015421422?text=Elf%2010W40%20koli%20toptan%20fiyatı%20alabilir%20miyim?" class="btn-view btn-wa">Hızlı Teklif İste</a></div>
-            <div class="product-card"><span class="tag tag-motor-can">10W-40 Bidon</span><h3>Total Quartz 7000 10W-40 (4L Koli)</h3><a href="https://wa.me/905015421422?text=Total%2010W40%20koli%20toptan%20fiyatı%20alabilir%20miyim?" class="btn-view btn-wa">Hızlı Teklif İste</a></div>
-            <div class="product-card"><span class="tag tag-motor-can">10W-40 Bidon</span><h3>Motul 4100 Turbolight 10W-40 (4L Koli)</h3><a href="https://wa.me/905015421422?text=Motul%2010W40%20koli%20toptan%20fiyatı%20alabilir%20miyim?" class="btn-view btn-wa">Hızlı Teklif İste</a></div>
-            <div class="product-card"><span class="tag tag-motor-can">5W-30 Bidon</span><h3>Castrol Edge 5W-30 LL (4L/5L Koli)</h3><a href="https://wa.me/905015421422?text=Castrol%20Edge%205W30%20koli%20toptan%20fiyatı%20alabilir%20miyim?" class="btn-view btn-wa">Hızlı Teklif İste</a></div>
-            <div class="product-card"><span class="tag tag-motor-can">5W-30 Bidon</span><h3>Petrol Ofisi Maxima CX 5W-30 (4L Koli)</h3><a href="https://wa.me/905015421422?text=PO%20Maxima%205W30%20koli%20toptan%20fiyatı%20alabilir%20miyim?" class="btn-view btn-wa">Hızlı Teklif İste</a></div>
+            <div class="product-card"><span class="tag tag-motor-can">10W-40 Bidon</span><h3>Petrol Ofisi Maxima 10W-40 (Koli)</h3><a href="blog-petrol-ofisi-maxima-10w40.html" class="btn-view">İncele & Teklif Al</a></div>
         </div>
     </div>
 </div>
+
+<section style="max-width: 1200px; margin: 40px auto 80px; padding: 0 20px;">
+    <div style="background: #fff; border-radius: var(--radius); padding: 40px; box-shadow: var(--shadow-lg); border: 1px solid var(--border);">
+        <h2 style="color: var(--primary); margin-bottom: 30px; font-size: 28px; border-bottom: 3px solid var(--accent); display: inline-block; padding-bottom: 10px;">Toptan Madeni Yağ Bilgi Rehberi</h2>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 20px;">
+            
+            <div>
+                <h3 style="color: var(--primary); font-size: 18px; margin-bottom: 15px;">🔍 Toptan Hidrolik 46, 68 ve 32 Seçimi</h3>
+                <p style="font-size: 14px; color: var(--text-muted); line-height: 1.7; text-align: justify;">
+                    Ankara Ostim madeni yağ toptancıları arasında en geniş stok hacmine sahip depomuzda; <strong>toptan hidrolik 46</strong>, 68 ve 32 numara yağlarda Shell Tellus, Petrol Ofisi Hydro Tech ve Castrol Hyspin ürünlerini palet bazında sunuyoruz. CNC tezgahları, enjeksiyon makineleri ve iş makineleri için ISO standartlarında yüksek koruma sağlıyoruz. 
+                </p>
+                <a href="https://wa.me/905015421422" style="color: var(--accent); font-weight: 700; font-size: 13px; margin-top: 10px; display: inline-block;">+ Teknik Katalog İsteyin</a>
+            </div>
+
+            <div>
+                <h3 style="color: var(--primary); font-size: 18px; margin-bottom: 15px;">🏗️ Şantiyeler İçin Toptan Gres Modelleri</h3>
+                <p style="font-size: 14px; color: var(--text-muted); line-height: 1.7; text-align: justify;">
+                    Ekskavatör ve kamyon filoları için vazgeçilmez olan <strong>toptan gres modelleri</strong>; kauçuklu gres, lifli gres ve lityum kompleks seçenekleriyle stoklarımızdadır. Moil, Borax ve Shell Gadus markalarımızla suya dayanıklı ve yüksek basınç performanslı çözümler üretiyoruz. Ankara dışı ambar gönderimimiz mevcuttur.
+                </p>
+                <a href="https://wa.me/905015421422" style="color: var(--accent); font-weight: 700; font-size: 13px; margin-top: 10px; display: inline-block;">+ Gres Karşılaştırma Cetveli</a>
+            </div>
+
+            <div>
+                <h3 style="color: var(--primary); font-size: 18px; margin-bottom: 15px;">💧 Toptan AdBlue ve Tek Dereceli Yağlar</h3>
+                <p style="font-size: 14px; color: var(--text-muted); line-height: 1.7; text-align: justify;">
+                    Euro 6 araç filoları için <strong>toptan adblue çeşitleri</strong> VDA onaylı Borax ve Petrol Ofisi güvencesiyle 18L ve IBC tank ambalajlarında sunulur. Ayrıca eski nesil makineler için <strong>toptan 10 numara</strong> ve <strong>toptan 30 numara</strong> çeşitlerimizde kurumsal iskonto oranları uygulanmaktadır.
+                </p>
+                <a href="https://wa.me/905015421422" style="color: var(--accent); font-weight: 700; font-size: 13px; margin-top: 10px; display: inline-block;">+ Filo Teklifi Al</a>
+            </div>
+
+            <div>
+                <h3 style="color: var(--primary); font-size: 18px; margin-bottom: 15px;">⚙️ Toptan 80W90, 90 ve 80 Numara Dişli Yağları</h3>
+                <p style="font-size: 14px; color: var(--text-muted); line-height: 1.7; text-align: justify;">
+                    Ağır hizmet diferansiyelleri için <strong>toptan 80w90 numara çeşitleri</strong> ile şanzıman sistemleri için <strong>toptan 80 numara</strong> ve <strong>toptan 90 numara</strong> ürünlerde Castrol Transmax ve Shell Spirax teknolojilerini kapınıza getiriyoruz. Madeni yağ toptancı fiyat listemiz için iletişime geçin.
+                </p>
+                <a href="https://wa.me/905015421422" style="color: var(--accent); font-weight: 700; font-size: 13px; margin-top: 10px; display: inline-block;">+ Güncel Fiyat Listesi</a>
+            </div>
+
+        </div>
+    </div>
+</section>
 
 <script>
     // Arama Çubuğu Filtreleme Sistemi
@@ -181,7 +214,6 @@
         let cards = document.getElementsByClassName('product-card');
         
         for (let i = 0; i < cards.length; i++) {
-            // H3 başlığını ve renkli Etiketi (tag) okuyarak arama yapar
             let title = cards[i].getElementsByTagName('h3')[0].innerText.toLowerCase();
             let tag = cards[i].getElementsByClassName('tag')[0].innerText.toLowerCase();
             
