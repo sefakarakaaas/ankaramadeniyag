@@ -239,7 +239,133 @@
                 </div>
             </div>
         </div>
+<style>
+    .reviews-container {
+        background: #f8fafc; padding: 50px 0; overflow: hidden; position: relative; border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0; margin-top: 40px; font-family: 'Inter', sans-serif;
+    }
+    .reviews-title { text-align: center; margin-bottom: 30px; }
+    .reviews-title h2 { color: #0f2027; font-size: 28px; margin-bottom: 5px; font-weight: 700;}
+    .reviews-title p { color: #64748b; font-size: 15px; }
+    .reviews-title span { color: #f59e0b; font-size: 22px; letter-spacing: 2px; }
+    
+    .reviews-track {
+        display: flex; width: max-content; animation: scrollReviews 25s linear infinite; gap: 20px; padding: 10px 0;
+    }
+    /* Fare kutuların üzerine gelince kayma dursun ki müşteri okuyabilsin */
+    .reviews-container:hover .reviews-track { animation-play-state: paused; }
 
+    /* Tıklanabilir Yorum Kutusu */
+    .review-box {
+        background: white; border: 1px solid #e2e8f0; border-radius: 12px; padding: 25px; width: 350px; flex-shrink: 0; box-shadow: 0 4px 6px rgba(0,0,0,0.05); cursor: pointer; text-decoration: none; transition: 0.3s; border-left: 5px solid #4285F4; display: flex; flex-direction: column; justify-content: space-between;
+    }
+    .review-box:hover { transform: translateY(-5px); box-shadow: 0 10px 15px rgba(0,0,0,0.1); border-left-color: #f59e0b; }
+    
+    .review-stars { color: #f59e0b; font-size: 18px; margin-bottom: 10px; }
+    .review-text { color: #334155; font-size: 14px; font-style: italic; line-height: 1.6; margin-bottom: 15px; }
+    
+    /* İsim ve Logo Bölümü */
+    .review-author { display: flex; align-items: center; gap: 12px; margin-top: auto; border-top: 1px solid #f1f5f9; padding-top: 15px;}
+    .author-avatar { background: #e2e8f0; color: #475569; width: 35px; height: 35px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 16px; }
+    .author-name { color: #0f2027; font-weight: 700; font-size: 14px; }
+    .google-logo { width: 18px; margin-left: auto; opacity: 0.8;}
+    
+    @keyframes scrollReviews {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(calc(-50% - 10px)); }
+    }
+</style>
+
+<div class="reviews-container">
+    <div class="reviews-title">
+        <h2>Müşterilerimiz Ne Diyor?</h2>
+        <span>★★★★★</span>
+        <p>Google Haritalar'daki Gerçek Müşteri Değerlendirmeleri</p>
+    </div>
+    
+    <div class="reviews-track">
+        
+        <a href="https://share.google/hDIRKOJj8jgsklwrn" target="_blank" class="review-box">
+            <div class="review-stars">★★★★★</div>
+            <div class="review-text">"Ostim'de toptan yağ konusunda en uygun fiyatları buradan aldık. Teslimat çok hızlıydı, esnaflıkları on numara."</div>
+            <div class="review-author">
+                <div class="author-avatar">S</div>
+                <div class="author-name">Sefa K**</div>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="google-logo" alt="Google Logo">
+            </div>
+        </a>
+        
+        <a href="https://share.google/hDIRKOJj8jgsklwrn" target="_blank" class="review-box">
+            <div class="review-stars">★★★★★</div>
+            <div class="review-text">"Şantiyemiz için varil gres alımı yaptık, aynı gün teslim ettiler. Bundan sonra tek adresimiz."</div>
+            <div class="review-author">
+                <div class="author-avatar">D</div>
+                <div class="author-name">Durmuş N*</div>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="google-logo" alt="Google Logo">
+            </div>
+        </a>
+
+        <a href="https://share.google/hDIRKOJj8jgsklwrn" target="_blank" class="review-box">
+            <div class="review-stars">★★★★★</div>
+            <div class="review-text">"Aradığımız 68 numara hidrolik yağını anında buldular. Çözüm odaklı ve güvenilir bir işletme."</div>
+            <div class="review-author">
+                <div class="author-avatar">M</div>
+                <div class="author-name">Mustafa K*</div>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="google-logo" alt="Google Logo">
+            </div>
+        </a>
+
+        <a href="https://share.google/hDIRKOJj8jgsklwrn" target="_blank" class="review-box">
+            <div class="review-stars">★★★★★</div>
+            <div class="review-text">"Teneke motor yağlarında çeşit çok, fiyatlar çok makul. İlgi ve alaka için teşekkürler."</div>
+            <div class="review-author">
+                <div class="author-avatar">E</div>
+                <div class="author-name">Erkan D**</div>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="google-logo" alt="Google Logo">
+            </div>
+        </a>
+
+        <a href="https://share.google/hDIRKOJj8jgsklwrn" target="_blank" class="review-box">
+            <div class="review-stars">★★★★★</div>
+            <div class="review-text">"Ostim'de toptan yağ konusunda en uygun fiyatları buradan aldık. Teslimat çok hızlıydı, esnaflıkları on numara."</div>
+            <div class="review-author">
+                <div class="author-avatar">S</div>
+                <div class="author-name">Sefa K**</div>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="google-logo" alt="Google Logo">
+            </div>
+        </a>
+        
+        <a href="https://share.google/hDIRKOJj8jgsklwrn" target="_blank" class="review-box">
+            <div class="review-stars">★★★★★</div>
+            <div class="review-text">"Şantiyemiz için varil gres alımı yaptık, aynı gün teslim ettiler. Bundan sonra tek adresimiz."</div>
+            <div class="review-author">
+                <div class="author-avatar">D</div>
+                <div class="author-name">Durmuş N*</div>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="google-logo" alt="Google Logo">
+            </div>
+        </a>
+
+        <a href="https://share.google/hDIRKOJj8jgsklwrn" target="_blank" class="review-box">
+            <div class="review-stars">★★★★★</div>
+            <div class="review-text">"Aradığımız 68 numara hidrolik yağını anında buldular. Çözüm odaklı ve güvenilir bir işletme."</div>
+            <div class="review-author">
+                <div class="author-avatar">M</div>
+                <div class="author-name">Mustafa K*</div>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="google-logo" alt="Google Logo">
+            </div>
+        </a>
+
+        <a href="https://share.google/hDIRKOJj8jgsklwrn" target="_blank" class="review-box">
+            <div class="review-stars">★★★★★</div>
+            <div class="review-text">"Teneke motor yağlarında çeşit çok, fiyatlar çok makul. İlgi ve alaka için teşekkürler."</div>
+            <div class="review-author">
+                <div class="author-avatar">E</div>
+                <div class="author-name">Erkan D**</div>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="google-logo" alt="Google Logo">
+            </div>
+        </a>
+
+    </div>
+</div>
         <div class="products-area">
             <div id="product-list" class="product-list">
                 <div style="text-align:center; padding: 60px 20px; color:var(--text-muted); background: #fff; border: 2px dashed var(--border); border-radius: var(--radius); font-size: 16px; font-weight: 600;">
