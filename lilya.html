@@ -4,112 +4,163 @@
     <meta charset="UTF-8">
     <meta name="robots" content="noindex, nofollow">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fatoş ve Lilya GELİYOOOR</title>
+    <title>Fatoş ve Lilya'nın Geliş Sayacı</title>
     <style>
+        * {
+            box-sizing: border-box;
+        }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #f8fcf8;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
             min-height: 100vh;
             margin: 0;
+            padding: 20px;
             text-align: center;
             color: #333;
         }
         h1 {
             color: #2c3e50;
-            margin-bottom: 10px;
+            margin-bottom: 5px;
             font-size: 2em;
         }
         h2 {
             color: #7f8c8d;
             margin-top: 0;
-            margin-bottom: 40px;
-            font-size: 1.2em;
+            margin-bottom: 30px;
+            font-size: 1.1em;
             font-weight: normal;
         }
+        
+        /* Sayaç Kutuları */
         .countdown-container {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             gap: 15px;
-            margin-bottom: 50px;
+            margin-bottom: 40px;
         }
         .time-box {
             background: #fff;
-            padding: 20px 25px;
-            border-radius: 15px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-            min-width: 90px;
+            padding: 15px 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            min-width: 85px;
             border-bottom: 4px solid #e91e63;
         }
         .time-box span {
             display: block;
-            font-size: 3em;
+            font-size: 2.5em;
             font-weight: bold;
             color: #e91e63;
             line-height: 1;
             margin-bottom: 5px;
         }
         .time-box label {
-            font-size: 1.1em;
+            font-size: 0.9em;
             color: #95a5a6;
             text-transform: uppercase;
-            letter-spacing: 1px;
         }
-        .progress-wrapper {
+
+        /* Dikey Cetvel ve Fotoğraf Alanı */
+        .ruler-wrapper {
             display: flex;
-            align-items: flex-end;
+            align-items: center;
             justify-content: center;
-            height: 400px; /* Çizimdeki gibi dikey bir bar */
+            gap: 30px;
             position: relative;
-            margin-bottom: 50px;
+            height: 500px; /* Cetvel yüksekliği */
+            margin-bottom: 30px;
         }
-        .progress-container {
-            width: 40px;
+
+        /* Cetvel ve İlerleme Çubuğu */
+        .ruler-container {
+            position: relative;
+            width: 50px;
             height: 100%;
-            background-color: #e0e0e0;
-            border-radius: 20px;
-            position: relative;
-            box-shadow: inset 0 2px 5px rgba(0,0,0,0.1);
+            background-color: #e8ecef;
+            border-radius: 10px;
+            border: 2px solid #bdc3c7;
+            box-shadow: inset 0 2px 5px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 5px 0;
         }
+
+        /* Doluluk Barı */
         .progress-bar {
-            width: 100%;
-            background: linear-gradient(0deg, #4caf50, #8bc34a);
-            border-radius: 20px;
-            height: 0%;
             position: absolute;
             bottom: 0;
-            transition: height 1s linear;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(0deg, #4caf50, #8bc34a);
+            border-radius: 8px;
+            height: 0%;
+            transition: height 0.5s ease;
+            z-index: 1;
         }
-        .sticker {
+
+        /* Cetvel Çizgileri ve Numaralar */
+        .ruler-mark {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 6px;
+            font-size: 11px;
+            font-weight: bold;
+            color: #34495e;
+            height: 0;
+        }
+        .ruler-mark::before {
+            content: '';
+            display: block;
+            width: 8px;
+            height: 2px;
+            background-color: #7f8c8d;
+        }
+
+        /* Küçük Fotoğraf (Sticker Çerçeve) */
+        .sticker-card {
             position: absolute;
-            bottom: 0%; 
-            left: 60px; /* Barın sağına hizalamak için */
-            transform: translateY(50%); /* Ortasını barın seviyesine hizalar */
-            width: 90px;
-            height: 90px;
+            left: 70px; /* Cetvelin sağında durur */
+            bottom: 0%; /* JS ile cetvel seviyesinde yükselir */
+            transform: translateY(50%);
+            width: 110px;
+            height: 110px;
             border-radius: 50%;
-            object-fit: cover;
             border: 4px solid #fff;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-            transition: bottom 1s linear;
+            box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+            overflow: hidden;
+            background-color: #fff;
             z-index: 10;
+            transition: bottom 0.5s ease;
         }
+        .sticker-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
         .destination {
-            margin-top: -20px;
-            font-size: 1.2em;
+            font-size: 1.1em;
             font-weight: bold;
             color: #27ae60;
+            margin-top: 10px;
         }
     </style>
 </head>
 <body>
 
     <h1>Fatoş ve Lilya Boztepe GELİYOOR! ✈️</h1>
+    <h2>Hanover (HAJ) ➔ Ankara (ESB)</h2>
 
+    <!-- Geri Sayım Kutuları -->
     <div class="countdown-container">
         <div class="time-box"><span id="days">0</span><label>Gün</label></div>
         <div class="time-box"><span id="hours">0</span><label>Saat</label></div>
@@ -117,67 +168,72 @@
         <div class="time-box"><span id="seconds">0</span><label>Saniye</label></div>
     </div>
 
-    <!-- Çizimdeki gibi dikey ilerleme çubuğu -->
-    <div class="progress-wrapper">
-        <div class="progress-container">
+    <!-- Cetvel ve Çıkartma Alanı -->
+    <div class="ruler-wrapper">
+        <div class="ruler-container" id="ruler">
             <div class="progress-bar" id="progress-bar"></div>
+            <!-- Cetvel çizgileri JavaScript ile 30'dan 0'a üretilecek -->
         </div>
-        <!-- Küçük kızın fotoğrafı (Çıkartma şeklinde) -->
-         <img src="lilya.jpg" alt="Lilya">    </div>
-    
+
+        <!-- Küçük Yuvarlak Çerçeveli Fotoğraf -->
+        <div class="sticker-card" id="sticker-card">
+            <!-- Resmi GitHub'da 'lilya.jpg' yaptıysanız src="lilya.jpg" yazabilirsiniz -->
+            <img src="lilya.jpg" alt="Lilya">
+        </div>
+    </div>
+
     <div class="destination"></div>
 
     <script>
-        // Bilet bilgilerine göre uçağın kalkış/varış zamanı (18 Ağustos 2026 22:20)
+        // Cetveli 30'dan 0'a Dinamik Oluştur
+        const ruler = document.getElementById("ruler");
+        for (let i = 30; i >= 0; i--) {
+            const mark = document.createElement("div");
+            mark.className = "ruler-mark";
+            mark.innerHTML = `<span>${i}</span>`;
+            ruler.appendChild(mark);
+        }
+
+        // Bilet Tarihi: 18 Ağustos 2026, 22:20
         const targetDate = new Date("2026-08-18T22:20:00").getTime();
-        
-        // Barın ilerlemesini anlamlı göstermek için başlangıç tarihi (1 Ağustos olarak belirlendi)
-        const startDate = new Date("2026-08-01T00:00:00").getTime();
 
         function updateCountdown() {
             const now = new Date().getTime();
             const distance = targetDate - now;
 
-            // Zaman dolduysa
-            if (distance < 0) {
+            if (distance <= 0) {
                 document.getElementById("days").innerText = "0";
                 document.getElementById("hours").innerText = "0";
                 document.getElementById("minutes").innerText = "0";
                 document.getElementById("seconds").innerText = "0";
-                
                 document.getElementById("progress-bar").style.height = "100%";
-                document.getElementById("sticker").style.bottom = "100%";
+                document.getElementById("sticker-card").style.bottom = "100%";
                 return;
             }
 
-            // Kalan zamanı hesapla
+            // Kalan Gün, Saat, Dakika, Saniye
             const days = Math.floor(distance / (1000 * 60 * 60 * 24));
             const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-            // HTML'e yazdır
             document.getElementById("days").innerText = days;
             document.getElementById("hours").innerText = hours;
             document.getElementById("minutes").innerText = minutes;
             document.getElementById("seconds").innerText = seconds;
 
-            // Bar ilerlemesini hesapla (Yüzde olarak)
-            const totalDuration = targetDate - startDate;
-            const elapsed = now - startDate;
-            let percentage = (elapsed / totalDuration) * 100;
-            
-            if (percentage < 0) percentage = 0;
-            if (percentage > 100) percentage = 100;
+            // Cetvel İlerlemesi: 30 güne göre bar oranı (Kalan gün azaldıkça bar yükselir)
+            // 30 gün = %0, 0 gün = %100 doluluk
+            let progressPercent = ((30 - days) / 30) * 100;
+            if (progressPercent < 0) progressPercent = 0;
+            if (progressPercent > 100) progressPercent = 100;
 
-            // Barın ve çıkartmanın (fotoğraf) yüksekliğini güncelle
-            document.getElementById("progress-bar").style.height = percentage + "%";
-            document.getElementById("sticker").style.bottom = percentage + "%";
+            document.getElementById("progress-bar").style.height = progressPercent + "%";
+            document.getElementById("sticker-card").style.bottom = progressPercent + "%";
         }
 
-        // Her saniye güncelle
         setInterval(updateCountdown, 1000);
-        updateCountdown(); // Sayfa yüklendiğinde anında çalıştır
+        updateCountdown();
     </script>
 </body>
 </html>
