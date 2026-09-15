@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light">
     <title>Toptan Madeni Yağ Fiyat Listesi | Ankara Ostim Depo</title>
     <meta name="description" content="Ankara toptan madeni yağ, varil hidrolik yağı, kauçuklu gres, 10w40 bidon ve teneke toptan satış fiyat listesi.">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
@@ -75,10 +76,17 @@
         @media (max-width: 768px) {
             .top-bar { flex-direction: column; gap: 10px; text-align: center; }
             .top-bar-right { flex-wrap: wrap; justify-content: center; }
-            .main-nav { flex-direction: column; gap: 15px; padding: 15px; }
-            .nav-links { flex-wrap: wrap; justify-content: center; gap: 15px; }
+            .main-nav { flex-direction: column; gap: 12px; padding: 14px 16px; }
+            .nav-links { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; width: 100%; }
+            .nav-link { display: block; text-align: center; padding: 11px 8px; border-radius: 8px; background: #f1f5f9; color: #0f2027 !important; }
+            .nav-link.nav-active { grid-column: 1 / -1; background: var(--primary) !important; color: #fff !important; box-shadow: none; }
+            .top-contact, .top-bar a { color: #fff !important; }
         }
     </style>
+    <link rel="icon" href="/favicon.ico" sizes="48x48">
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <meta name="theme-color" content="#0f2027">
 </head>
 <body>
 
@@ -94,11 +102,12 @@
 </div>
 
 <nav class="main-nav">
-    <div class="logo">Ankara Madeni Yağ</div>
+    <a href="index.html" class="logo" style="display:flex;align-items:center;gap:10px"><img src="logo.png" alt="Ankara Madeni Yağ logo" width="40" height="40">Ankara Madeni Yağ</a>
     <div class="nav-links">
         <a href="index.html" class="nav-link">Ana Sayfa</a>
         <a href="index.html" class="nav-link">Ürünlerimiz</a>
         <a href="toptan.html" class="nav-link nav-active">📦 Toptan Sipariş</a>
+        <a href="blog.html" class="nav-link">Blog</a>
         <a href="iletisim.html" class="nav-link">İletişim</a>
     </div>
 </nav>
