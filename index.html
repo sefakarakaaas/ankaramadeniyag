@@ -25,6 +25,7 @@
     </script>
 
     <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "@id": "https://ankaramdeniyaglar.com.tr/#organization", "name": "Ankara Madeni Yağ", "url": "https://ankaramdeniyaglar.com.tr/", "logo": {"@type": "ImageObject", "url": "https://ankaramdeniyaglar.com.tr/logo.png", "width": 512, "height": 512}, "telephone": "+905015421422"}</script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "@id": "https://ankaramdeniyaglar.com.tr/#organization", "name": "Ankara Madeni Yağ", "url": "https://ankaramdeniyaglar.com.tr/", "logo": {"@type": "ImageObject", "url": "https://ankaramdeniyaglar.com.tr/logo.png", "width": 512, "height": 512}, "telephone": "+905015421422"}</script>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -173,6 +174,7 @@
             .nav-menu a { display: block; padding: 12px; background: #f1f5f9; border-radius: 8px; font-size: 16px; width: 100%; } 
             .nav-menu a.active::after { display: none; } 
             .nav-menu a.toptan-link { background: var(--primary-light) !important; color: #fff !important; }
+            .nav-menu a.toptan-link { background: var(--primary-light) !important; color: #fff !important; }
             
             .hero { padding: 80px 20px 100px 20px; clip-path: none; }
             .hero h1 { font-size: 32px; }
@@ -190,6 +192,7 @@
     <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <meta name="theme-color" content="#0f2027">
+    <link rel="canonical" href="https://ankaramdeniyaglar.com.tr/">
 </head>
 <body>
 
@@ -204,18 +207,19 @@
 
     <header>
         <div class="nav-container">
-            <a href="index.html" class="nav-logo">
+            <a href="/" class="nav-logo">
                 <img src="logo.png" alt="Ankara Madeni Yağ logo" width="40" height="40">
                 Ankara Madeni Yağ
             </a>
             <div class="menu-toggle" onclick="toggleMenu()">☰</div>
             
             <ul class="nav-menu" id="mobile-menu">
-                <li><a href="index.html" class="active">Ana Sayfa</a></li>
+                <li><a href="/" class="active">Ana Sayfa</a></li>
                 <li><a href="#selector" onclick="toggleMenu()">Ürünlerimiz</a></li>
-                <li><a href="toptan.html" class="toptan-link">📦 Toptan Sipariş</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="iletisim.html">İletişim</a></li>
+                <li><a href="/toptan" class="toptan-link">📦 Toptan Sipariş</a></li>
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="/iletisim">İletişim</a></li>
             </ul>
         </div>
     </header>
