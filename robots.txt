@@ -1,7 +1,10 @@
 User-agent: *
 Allow: /
+Allow: /llms.txt
 
 Sitemap: https://ankaramdeniyaglar.com.tr/sitemap.xml
 
-# Anahtar Kelime Hedeflemesi
-# 46 numara yağ toptan, 10 numara yağ varil, gres toptan, adblue toptan
+# LLMs.txt (Yapay Zeka ve Arama Motoru Botları İçin Kurumsal Rehber)
+# https://ankaramdeniyaglar.com.tr/llms.txt
+# Petromia Madeni Yağ A.Ş. / Ankara Grup Madeni Yağ Otomotiv İnşaat San. ve Tic. Ltd. Şti.
+# Ostim OSB Mah. 1229. Cad. No:7 Yenimahalle / Ankara | Tel: 0501 542 14 22

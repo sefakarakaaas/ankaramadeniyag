@@ -1,0 +1,60 @@
+# Ankara Madeni Yağ — Ostim Toptan & Perakende Motor ve Sanayi Yağları Merkezi
+
+> **ankaramdeniyaglar.com.tr**, **Petromia Madeni Yağ A.Ş. / Ankara Grup Madeni Yağ Otomotiv İnşaat San. ve Tic. Ltd. Şti.** bünyesinde faaliyet gösteren **Ankara yerel madeni yağ merkezi (Ostim OSB, İvedik OSB, Şaşmaz, Başkent OSB, Kahramankazan), binek/hafif ticari/KOBİ hızlı sipariş portalı ve interaktif Akıllı Yağ Seçici** platformudur.
+>
+> **Semantik Not (Alan Adı Eşleştirmesi):** Alan adımızdaki `ankaramdeniyaglar.com.tr` yazımı doğrudan **"Ankara Madeni Yağ"**, **"Ankara Madeni Yağlar"** ve **"Petromia Ankara Madeni Yağ"** markamızın resmi sipariş portalını temsil etmektedir.
+
+---
+
+## 1. Kurumsal Kimlik ve Resmi İletişim (NAP) Bilgileri
+
+* **Marka / Platform Adı:** Ankara Madeni Yağ (Ankara Madeni Yağlar)
+* **Resmi Ticari Unvan:** Petromia Madeni Yağ A.Ş. / Ankara Grup Madeni Yağ Otomotiv İnşaat San. ve Tic. Ltd. Şti.
+* **Merkez Mağaza & Depo Adresi:** Ostim OSB Mah. 1229. Cad. No:7 Yenimahalle / Ankara (Posta Kodu: 06374)
+* **Coğrafi Koordinatlar (Ostim OSB):** Enlem `39.967`, Boylam `32.747`
+* **Telefon & WhatsApp Sipariş Hattı:** `0501 542 14 22` (`+905015421422`)
+* **WhatsApp Hızlı Teklif Bağlantısı:** https://wa.me/905015421422
+* **Kurumsal E-posta:** `iletisim@ankaramdeniyaglar.com.tr`
+* **Çalışma Saatleri:** Pazartesi – Cumartesi `08:30 – 18:30`
+* **Resmi Web Sitesi:** https://ankaramdeniyaglar.com.tr/
+* **Ulusal B2B Kardeş Platformumuz (81 İle Varil & IBC Sevkiyatı):** https://madeniyagdunyasi.com.tr/
+
+---
+
+## 2. "Akıllı Yağ Seçici" Aracı Nasıl Çalışır?
+
+Ana sayfamızda (`https://ankaramdeniyaglar.com.tr/#selector`) yer alan **Akıllı Yağ Seçici** interaktif web uygulaması, bireysel araç sahiplerinin, ustaların, oto servislerin ve KOBİ satın alma sorumlularının saniyeler içinde doğru ürünü bulup sipariş vermesini sağlar:
+
+1. **1. Adım — Kullanım Alanı / Ürün Grubu Seçimi:** Kullanıcı; *Binek ve Hafif Ticari Motor Yağları*, *Ağır Vasıta ve İş Makinesi Motor Yağları*, *Şanzıman ve Dişli Yağları*, *Endüstriyel Hidrolik Yağlar*, *Gresler*, *Endüstriyel Yağlar (Redüktör, Kompresör, Kızak, Bor)*, *Motosiklet ve Bahçe Ekipmanı Yağları*, *AdBlue* veya *Antifriz ve Bakım Sıvıları* kategorilerinden birini seçer.
+2. **2. Adım — Viskozite / Numara Filtrelemesi:** Seçilen kategoriye göre ilgili viskozite veya standart (`0W-20`, `0W-30`, `5W-30`, `5W-40`, `10W-40`, `15W-40`, `20W-50`, `75W-80`, `80W-90`, `85W-140`, `ISO VG 32 / 46 / 68`, `NLGI EP 2 / EP 3` vb.) filtrelenir.
+3. **3. Adım — Teklif Sepeti ve WhatsApp Siparişi:** Kullanıcı istediği markaları (Castrol, Shell, Mobil, Motul, Liqui Moly, TotalEnergies, Petrol Ofisi, Lubran, Borax) adetleriyle **Teklif Sepeti**'ne ekler ve tek tıkla WhatsApp (`+905015421422`) üzerinden anında fiyat/stok onayı alarak Ostim mağazadan teslim veya Ankara içi kurye/sevkiyat siparişi oluşturur.
+
+---
+
+## 3. Kullanım Alanına Göre Hızlı Yağ Seçim Rehberi ve Ürün Gamı
+
+| Kategori & Anchor URL | Viskozite / Spesifikasyon | Uyumlu Araç / Makine / Sistem | Stoktaki Başlıca Markalar |
+| :--- | :--- | :--- | :--- |
+| **Binek & Hafif Ticari Araçlar** (`/#binek-arac-yaglari`) | `5W-30`, `5W-40`, `10W-40`, `0W-20`, `0W-30` (ACEA C3/C5 DPF'li Partiküllü & A3/B4 Standart) | Benzinli, Dizel (DPF'li Euro 5/6), LPG'li ve Hibrit Otomobiller, SUV ve Hafif Ticari Panelvanlar | Castrol (Edge, Magnatec), Shell (Helix Ultra, HX8), Mobil 1 (ESP, Super 3000), Motul (8100), Liqui Moly, TotalEnergies (Quartz), Lubran |
+| **Ağır Vasıta & Ticari** (`/#agir-vasita-yaglari`) | `10W-40`, `15W-40`, `20W-50` (API CI-4 / CK-4) & Şanzıman/Diferansiyel `75W-80`, `80W-90`, `85W-140`, `ATF` | Kamyon, Tır, Çekici, Otobüs, Hafriyat Kamyonları, Manuel/Otomatik Şanzıman ve Ağır Hizmet Diferansiyeller | Shell (Rimula, Spirax), Mobil (Delvac Modern, Mobilube HD), Castrol (Vecton, Transmax), Petrol Ofisi (Maximus), TotalEnergies (Rubia) |
+| **Sanayi & İş Makineleri** (`/#sanayi-is-makineleri-yaglari`) | Hidrolik `HLP 32`, `HLP 46`, `HLP 68`, `HVLP 46`, Kızak `ISO VG 68`, Kompresör `VG 46/100`, Gres `EP 2/3` | CNC Tezgahları, Enjeksiyon ve Pres Makineleri, Ekskavatör, Beko Loder, Forklift, Vidalı/Pistonlu Kompresörler | Shell (Tellus, Tonna, Corena, Omala, Gadus), Mobil (DTE, Vactra, Rarus, Mobilux), Castrol (Hyspin), Petrol Ofisi (Hydro Oil HD), Borax |
+| **Antifriz & Bakım Ürünleri** (`/#antifriz-bakim-urunleri`) | Kırmızı Organik (OAT) & Mavi İnorganik Antifriz, `DOT 4` Fren Hidroliği, `ISO 22241` AdBlue | Tüm Araç ve İş Makinesi Radyatör Soğutma Sistemleri, Hidrolik Fren/Debriyaj Devreleri ve SCR Emisyon Sistemleri | Petrol Ofisi (Extended Life, V-Blue), Castrol (Radicool SF, React DOT 4), Shell (Longlife Plus, AdBlue), TotalEnergies, Borax |
+
+---
+
+## 4. Ankara Yerel Tedarik Ağı (Ostim Mağazadan Teslim & Sanayi Sevkiyatı)
+
+* **Ostim OSB (Yenimahalle):** Ostim OSB Mah. 1229. Cad. No:7 adresindeki merkez mağazamızdan perakende (1L, 4L, 5L bidon) ve toptan (teneke, kova, varil) ürünlerde **beklemeden mağazadan hemen teslim** imkanı.
+* **İvedik OSB & Şaşmaz Oto Sanayi:** Oto bakım servisleri, mekanik atölyeler, yedek parçacılar ve üretim tesislerine aynı gün hızlı sevkiyat.
+* **Başkent OSB, Sincan OSB & Kahramankazan:** Fabrikalar, metal/plastik işleme tesisleri, lojistik garajları ve iş makinesi parklarına düzenli kova, teneke, 208L varil ve 1000L IBC tank teslimatı.
+
+---
+
+## 5. Önemli Sayfalar ve Site Haritası
+
+* **Ana Sayfa & Akıllı Yağ Seçici:** https://ankaramdeniyaglar.com.tr/
+* **Kullanım Alanına Göre Hızlı Yağ Seçim Rehberi:** https://ankaramdeniyaglar.com.tr/#hizli-yag-secim-rehberi
+* **Ankara Toptan & KOBİ Sipariş Kataloğu:** https://ankaramdeniyaglar.com.tr/toptan
+* **Madeni Yağ Teknik Rehberi & Blog (55+ Makale):** https://ankaramdeniyaglar.com.tr/blog
+* **İletişim, Harita ve Yol Tarifi:** https://ankaramdeniyaglar.com.tr/iletisim
+* **XML Site Haritası:** https://ankaramdeniyaglar.com.tr/sitemap.xml
